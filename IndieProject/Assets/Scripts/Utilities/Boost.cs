@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace UnityStandardAssets.Vehicles.Ball
 {
     public class Boost : MonoBehaviour
     {
-
         [SerializeField]
         private Ball ball; 
 

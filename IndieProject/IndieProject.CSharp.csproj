@@ -226,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Test.cs" />
     <Compile Include="Assets\Scripts\Utilities\Boost.cs" />
     <Compile Include="Assets\Scripts\Utilities\Trampoline.cs" />
   </ItemGroup>
