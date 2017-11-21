@@ -29,8 +29,8 @@ public class EnemyMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         distanceFromPlayer = transform.position - player.transform.position;
-        Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
-        Debug.Log("Velocity " + rb.velocity.magnitude); 
+        //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
+        //Debug.Log("Velocity " + rb.velocity.magnitude); 
         Move();
 	}
 

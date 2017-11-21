@@ -267,13 +267,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="IndieProject.CSharp.Plugins.csproj">
-      <Project>{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}</Project>
-      <Name>IndieProject.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="IndieProject.CSharp.csproj">
       <Project>{32373B27-3B2D-0B0D-F653-DB5B960B4732}</Project>
       <Name>IndieProject.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="IndieProject.CSharp.Plugins.csproj">
+      <Project>{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}</Project>
+      <Name>IndieProject.CSharp.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
