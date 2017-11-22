@@ -225,10 +225,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy\Egg.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Test.cs" />
-    <Compile Include="Assets\Scripts\Utilities\Boost.cs" />
-    <Compile Include="Assets\Scripts\Utilities\Trampoline.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Boost.cs" />
+    <Compile Include="Assets\Scripts\Interactables\DimensionHole.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Trampoline.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

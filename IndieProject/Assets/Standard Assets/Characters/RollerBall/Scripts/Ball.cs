@@ -21,6 +21,11 @@ namespace UnityStandardAssets.Vehicles.Ball
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
         }
 
+        public Rigidbody Rigidbody
+        {
+            get { return m_Rigidbody; }
+        }
+
         public void Move(Vector3 moveDirection, bool jump)
         {
             // If using torque to rotate the ball...
@@ -44,10 +49,10 @@ namespace UnityStandardAssets.Vehicles.Ball
         }
 
 
-        public void Boost(Vector3 boostPos)
+        public void Boost(Vector3 dir, Vector3 boostPos)
         {
             Debug.Log("Boost");
-            m_Rigidbody.AddForce(-Vector3.forward * 10, ForceMode.Impulse);
+            m_Rigidbody.AddForce(-dir, ForceMode.Impulse);
         }
     }
 }
