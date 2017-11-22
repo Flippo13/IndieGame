@@ -10,11 +10,13 @@ public class PeanutPouch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<PeanutCollectable>() != null)
+        PeanutCollectable pc = other.GetComponent<PeanutCollectable>();
+        if(pc != null && !pc.pickedUp)
         {
-            peanuts++;
+            pc.pickedUp = true;
+            peanuts += pc.worth;
             indicator.text = "Peanuts: " + peanuts;
-            Destroy(other.gameObject);
+            Destroy(pc.gameObject);
         }
     }
 }

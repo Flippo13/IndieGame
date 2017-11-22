@@ -5,6 +5,7 @@ using System.Collections;
 public class UIManager : MonoBehaviour
 {
     public Canvas hud;
+
     
     private void Awake()
     {
