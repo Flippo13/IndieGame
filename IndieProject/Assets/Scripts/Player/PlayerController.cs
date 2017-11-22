@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     
     public Camera playerCamera;
+    private Transform cameraTransform;
 
     private CharacterController controller;
     private bool grounded { get { return controller.isGrounded; } }
-    
+
     public bool Enabled;
-    
+
+    private float momentum;
+    private Vector3 movement;
+
     [Header("Player")]
     public float walkSpeed;
     public float runSpeed;
@@ -19,13 +23,20 @@ public class PlayerController : MonoBehaviour {
     [Range(0, 1)]
     public float friction;
 
-    private float momentum;
-    private Vector3 movement;
-
     [Header("Camera")]
     public float distance;
-    [Range(-30, 30)]
-    public float angle;
+    [SerializeField]
+    [Range(-45, 45)]
+    private float _angle;
+    public float angle
+    {
+        get { return playerCamera.transform.rotation.eulerAngles.z; }
+        set
+        {
+            playerCamera.transform.rotation = Quaternion.Euler(value, playerCamera.transform.rotation.eulerAngles.y, 0);
+            MoveCamera();
+        }
+    }
     [SerializeField]
     private bool _showCursor;
     public bool showCursor
@@ -34,16 +45,10 @@ public class PlayerController : MonoBehaviour {
         set { Cursor.visible = value; }
     }
 
-    private void OnValidate()
-    {
-        if (playerCamera == null) return;
-        playerCamera.transform.rotation = Quaternion.Euler(angle, playerCamera.transform.rotation.eulerAngles.y, 0);
-        MoveCamera();
-    }
-
     void Awake () {
         controller = GetComponent<CharacterController>();
-        Debug.Assert(controller != null, gameObject.name + ": No CharacterController found!");
+        Debug.Assert(controller != null, gameObject.name + ": No CharacterController attached.");
+        Debug.Assert(playerCamera != null, gameObject.name + ": No Camera Attached.");
         showCursor = _showCursor;
     }
 
