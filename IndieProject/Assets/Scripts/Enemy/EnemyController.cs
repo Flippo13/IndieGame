@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
 
     [SerializeField]
     private GameObject player;
+    [SerializeField]
+    private GameObject egg;
+    [SerializeField]
+    private Transform spawnPos; 
 
     [SerializeField]
     private float speed;
@@ -19,6 +23,9 @@ public class EnemyMovement : MonoBehaviour
     private int maxDistanceFromPlayer;
     private Vector3 distanceFromPlayer;
 
+    [SerializeField]
+    private int setDropTime;
+    private float dropTime; 
 
     private Rigidbody rb;
 
@@ -26,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        dropTime = setDropTime; 
     }
 
     // Update is called once per frame
@@ -34,6 +42,14 @@ public class EnemyMovement : MonoBehaviour
         distanceFromPlayer = transform.position - player.transform.position;
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
+        if(distanceFromPlayer.magnitude < 20f) 
+        dropTime -= Time.deltaTime;
+
+        if (dropTime <= 0)
+        {
+            DropEgg();
+            dropTime = setDropTime; 
+        }
         Move();
     }
 
@@ -44,4 +60,21 @@ public class EnemyMovement : MonoBehaviour
         else if (rb.velocity.magnitude < 12f)
             rb.AddForce(moveDirection * speed);
     }
+
+    private void DropEgg() 
+    {
+        var droppedEgg =  Instantiate(egg, null, true);
+        droppedEgg.transform.position = spawnPos.position; 
+        Debug.Log(droppedEgg.transform.position); 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Egg")
+        {
+            Debug.Log("Hit"); 
+            Destroy(other); 
+        }
+    }
+
 }
