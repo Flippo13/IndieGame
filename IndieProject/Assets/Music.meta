@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:IndieProject/Assets/Scripts/Utils.meta
 <<<<<<< HEAD:IndieProject/Assets/Particles.meta
 guid: 11042392403917044aef90e099fa4628
 folderAsset: yes
@@ -8,6 +9,11 @@ guid: a6961eedf844f4e439eb4e12ee0ac946
 folderAsset: yes
 timeCreated: 1511436849
 >>>>>>> Test_Branch:IndieProject/Assets/Scripts/Utils.meta
+=======
+guid: 3d90fa4c3c549ec44b2dde13a126fd91
+folderAsset: yes
+timeCreated: 1511449964
+>>>>>>> Test_Branch:IndieProject/Assets/Music.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
