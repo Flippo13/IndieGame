@@ -228,12 +228,17 @@
     <Compile Include="Assets\Scripts\Economy\PeanutCollectable.cs" />
     <Compile Include="Assets\Scripts\Economy\PeanutPouch.cs" />
     <Compile Include="Assets\Scripts\Effects\Spin.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Egg.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Boost.cs" />
+    <Compile Include="Assets\Scripts\Interactables\DimensionHole.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Trampoline.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PhysPlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Utilities\Boost.cs" />
-    <Compile Include="Assets\Scripts\Utilities\Trampoline.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

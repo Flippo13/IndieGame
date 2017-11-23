@@ -49,6 +49,11 @@ public class PhysPlayerController : MonoBehaviour {
         set { Cursor.visible = value; }
     }
     
+    public Rigidbody Rigidbody
+    {
+        get { return rbody;  }
+    }
+
     private bool isOnWall(float offMargin)
     {
         Vector3 dir;
@@ -103,7 +108,7 @@ public class PhysPlayerController : MonoBehaviour {
             rbody.velocity = new Vector3(s.x, rbody.velocity.y, s.y);
         }
     }
-    private float globalSpeed {
+    public float globalSpeed {
         get { return rbody.velocity.magnitude; }
         set { rbody.velocity = rbody.velocity.normalized * value; }
     }

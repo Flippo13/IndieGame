@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityStandardAssets.Vehicles.Ball
-{
     public class Boost : MonoBehaviour
     {
         [SerializeField]
-        private Ball ball; 
+        private PhysPlayerController player; 
         private enum Direction { right, left, forward, backward };
 
         [SerializeField]
@@ -39,9 +37,8 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void OnCollisionStay(Collision other)
         {
-            float playerSpeed = ball.Rigidbody.velocity.magnitude;
+            float playerSpeed = player.Rigidbody.velocity.magnitude;
             Vector3 boost = dir * playerSpeed * strength;
-            ball.Rigidbody.AddForce(boost, ForceMode.Impulse); 
+            player.Rigidbody.AddForce(boost, ForceMode.Impulse); 
         }
     }
-}

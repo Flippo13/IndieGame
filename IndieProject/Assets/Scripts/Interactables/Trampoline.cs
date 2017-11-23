@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityStandardAssets.Vehicles.Ball
-{
     public class Trampoline : MonoBehaviour
     {
         [SerializeField]
-        private Ball ball; 
+        private PhysPlayerController player; 
         // Use this for initialization
         void Start()
         {
@@ -21,10 +19,9 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void OnCollisionEnter(Collision other)
         {
-            float playerSpeed = ball.Rigidbody.velocity.magnitude;
+            float playerSpeed = player.Rigidbody.velocity.magnitude;
             Vector3 launchDirection = transform.up;
             Vector3 launchPower = launchDirection * playerSpeed * 0.1f;
-            ball.Rigidbody.AddForce(launchPower, ForceMode.Impulse); 
+            player.Rigidbody.AddForce(launchPower, ForceMode.Impulse); 
         }
     }
-}
