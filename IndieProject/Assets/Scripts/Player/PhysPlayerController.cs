@@ -4,7 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PhysPlayerController : MonoBehaviour {
+    /** //New Script
+    private Rigidbody rbody;
 
+    public bool Enabled;
+    public bool DebugMode;
+
+    [Header("Player")]
+    public float runSpeed;
+    public float turnSpeed;
+
+    /**/ //Old Script
     const float OFFMARGIN = 0.1f;
     
     private Rigidbody rbody;
@@ -248,5 +258,5 @@ public class PhysPlayerController : MonoBehaviour {
         }
     }
 
-
+    /**/
 }
