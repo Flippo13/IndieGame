@@ -1,6 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:IndieProject/Assets/Sprites.meta
+guid: 9afa69da25cb7ce428948c968ca2f36b
+folderAsset: yes
+timeCreated: 1511447655
+licenseType: Free
+=======
 guid: db69b3da6ede2444b92c479f24b48999
 folderAsset: yes
+>>>>>>> Test_Branch:IndieProject/Assets/Standard Assets/Effects/GlassRefraction/Materials.meta
 DefaultImporter:
   userData: 
   assetBundleName: 
