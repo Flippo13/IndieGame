@@ -50,7 +50,6 @@ public class PhysPlayerController : MonoBehaviour {
         get { return Cursor.visible; }
         set { Cursor.visible = value; }
     }
-<<<<<<< HEAD
 
     private float _wallGrip;
     private bool _doubleJump;
@@ -76,12 +75,10 @@ public class PhysPlayerController : MonoBehaviour {
     private bool controlPadPressed
     {
         get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-=======
-    
+    }   
     public Rigidbody Rigidbody
     {
         get { return rbody;  }
->>>>>>> Test_Branch
     }
 
     private bool isOnWall(float offMargin)
@@ -122,10 +119,8 @@ public class PhysPlayerController : MonoBehaviour {
     {
         return Physics.Raycast(transform.position, -transform.up, out hit, 1 + offMargin);
     }
-<<<<<<< HEAD
     #endregion
-=======
-
+    /*
     private float _wallGrip;
     private bool _doubleJump;
     private float _currentSpeed;
@@ -147,8 +142,7 @@ public class PhysPlayerController : MonoBehaviour {
     {
         get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
     }
->>>>>>> Test_Branch
-
+    */
     void Awake()
     {
         rbody = GetComponent<Rigidbody>();
