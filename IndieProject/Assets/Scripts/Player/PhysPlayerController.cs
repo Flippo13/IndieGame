@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PhysPlayerController : MonoBehaviour {
 
     const float OFFMARGIN = 0.1f;
-
+    
     private Rigidbody rbody;
 
     public bool Enabled;
@@ -49,9 +49,9 @@ public class PhysPlayerController : MonoBehaviour {
         set { Cursor.visible = value; }
     }
     
-    public Rigidbody Rigidbody
+    public Rigidbody RigidBody
     {
-        get { return rbody;  }
+        get { return rbody; }
     }
 
     private bool isOnWall(float offMargin)

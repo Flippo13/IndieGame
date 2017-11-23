@@ -28,8 +28,7 @@ using UnityEngine;
             else if (dirStat == Direction.backward)
                 dir = new Vector3(0, 0, -1);
         }
-
-        // Update is called once per frame
+    
         void Update()
         {
             
@@ -37,8 +36,8 @@ using UnityEngine;
 
         private void OnCollisionStay(Collision other)
         {
-            float playerSpeed = player.Rigidbody.velocity.magnitude;
+            float playerSpeed = player.RigidBody.velocity.magnitude;
             Vector3 boost = dir * playerSpeed * strength;
-            player.Rigidbody.AddForce(boost, ForceMode.Impulse); 
+            player.RigidBody.AddForce(boost, ForceMode.Impulse); 
         }
     }
