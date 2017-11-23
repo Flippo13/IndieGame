@@ -21,9 +21,13 @@ MonoBehaviour:
   m_Title: 
   m_RootView: {fileID: 2}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 542}
 =======
   m_MinSize: {x: 950, y: 392}
+>>>>>>> Alex_Branch
+=======
+  m_MinSize: {x: 950, y: 300}
 >>>>>>> Alex_Branch
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
@@ -111,6 +115,7 @@ MonoBehaviour:
     width: 1366
     height: 635
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
@@ -120,6 +125,12 @@ MonoBehaviour:
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
   controlID: 110
+>>>>>>> Alex_Branch
+=======
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 35
 >>>>>>> Alex_Branch
 --- !u!114 &6
 MonoBehaviour:
@@ -142,6 +153,7 @@ MonoBehaviour:
     width: 1078
     height: 635
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
@@ -151,6 +163,12 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
   controlID: 77
+>>>>>>> Alex_Branch
+=======
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 36
 >>>>>>> Alex_Branch
 --- !u!114 &7
 MonoBehaviour:
@@ -183,7 +201,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 27
+>>>>>>> Alex_Branch
+=======
+  controlID: 37
 >>>>>>> Alex_Branch
 --- !u!114 &8
 MonoBehaviour:
@@ -260,14 +282,14 @@ MonoBehaviour:
     y: 453
     width: 1078
     height: 182
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -408,24 +430,30 @@ MonoBehaviour:
     height: 432
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: a62a0000
     m_LastClickedID: 10918
     m_ExpandedIDs: a6fbffff00000000
 >>>>>>> Alex_Branch
+=======
+    m_SelectedIDs: c0ddfeff
+    m_LastClickedID: -74304
+    m_ExpandedIDs: 52f9ffff74faffff00000000f62a0000322b0000
+>>>>>>> Alex_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PhysicsPlayer
-      m_OriginalName: PhysicsPlayer
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10918
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -468,14 +496,14 @@ MonoBehaviour:
     height: 432
 >>>>>>> Alex_Branch
   m_SceneLighting: 1
-  lastFramingTime: 69295.23393852975
+  lastFramingTime: 2069.639822347667
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 24.537392, y: 34.642506, z: 2.344173}
+    m_Target: {x: 38.134758, y: 23.398369, z: 19.251322}
     speed: 2
-    m_Value: {x: 24.537392, y: 34.642506, z: 2.344173}
+    m_Value: {x: 38.134758, y: 23.398369, z: 19.251322}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -498,17 +526,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.18565181, y: -0.0888765, z: 0.016865762, w: -0.97844267}
+    m_Target: {x: -0.23951995, y: 0.5215384, z: -0.15535931, w: -0.8040469}
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: {x: -0.061435763, y: -0.03202316, z: 0.0019734355, w: -0.9975953}
 =======
     m_Value: {x: -0.18565181, y: -0.0888765, z: 0.016865762, w: -0.97844267}
 >>>>>>> Alex_Branch
+=======
+    m_Value: {x: -0.23951995, y: 0.5215384, z: -0.15535931, w: -0.8040469}
+>>>>>>> Alex_Branch
   m_Size:
-    m_Target: 6.1173162
+    m_Target: 4.0416584
     speed: 2
-    m_Value: 6.1173162
+    m_Value: 4.0416584
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -592,6 +624,7 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scripts/Utilities
   m_ViewMode: 1
   m_StartGridSize: 78
@@ -604,10 +637,18 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
 >>>>>>> Alex_Branch
+=======
+    - Assets/Materials
+  m_ViewMode: 1
+  m_StartGridSize: 78
+  m_LastFolders:
+  - Assets/Materials
+>>>>>>> Alex_Branch
   m_LastFoldersGridSize: 78
   m_LastProjectPath: D:\Saxion\2nd Year\2nd Period\IndieGame\IndieProject
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 131}
     m_SelectedIDs: f02d0000
@@ -618,6 +659,12 @@ MonoBehaviour:
     m_SelectedIDs: a4270000
     m_LastClickedID: 10148
     m_ExpandedIDs: 000000008c270000a42700000e28000000ca9a3bffffff7f
+>>>>>>> Alex_Branch
+=======
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: 2e280000
+    m_LastClickedID: 10286
+    m_ExpandedIDs: 0000000000280000182800008228000000ca9a3bffffff7f
 >>>>>>> Alex_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -647,9 +694,13 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000602d0000c42d0000
 =======
     m_ExpandedIDs: 000000008c270000a42700000e280000
+>>>>>>> Alex_Branch
+=======
+    m_ExpandedIDs: 00000000002800001828000082280000
 >>>>>>> Alex_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -675,8 +726,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0e2b0000
-    m_LastClickedInstanceID: 11022
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -763,7 +814,7 @@ MonoBehaviour:
     width: 286
 >>>>>>> Alex_Branch
     height: 614
-  m_ScrollPosition: {x: 0, y: 525.9551}
+  m_ScrollPosition: {x: 0, y: 49.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
