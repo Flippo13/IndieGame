@@ -50,7 +50,7 @@ public class PhysPlayerController : MonoBehaviour {
         get { return Cursor.visible; }
         set { Cursor.visible = value; }
     }
-<<<<<<< HEAD
+
 
     private float _wallGrip;
     private bool _doubleJump;
@@ -76,12 +76,9 @@ public class PhysPlayerController : MonoBehaviour {
     private bool controlPadPressed
     {
         get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-    }   
-    public Rigidbody Rigidbody
-=======
+    }
     
     public Rigidbody RigidBody
->>>>>>> Test_Branch
     {
         get { return rbody; }
     }
@@ -125,29 +122,7 @@ public class PhysPlayerController : MonoBehaviour {
         return Physics.Raycast(transform.position, -transform.up, out hit, 1 + offMargin);
     }
     #endregion
-    /*
-    private float _wallGrip;
-    private bool _doubleJump;
-    private float _currentSpeed;
-    private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
-    private bool _isRunnig = false;
-    private float groundSpeed {
-        get { return new Vector2(rbody.velocity.x, rbody.velocity.z).magnitude; }
-        set
-        {
-            Vector2 s = new Vector2(rbody.velocity.x, rbody.velocity.z).normalized * value;
-            rbody.velocity = new Vector3(s.x, rbody.velocity.y, s.y);
-        }
-    }
-    public float globalSpeed {
-        get { return rbody.velocity.magnitude; }
-        set { rbody.velocity = rbody.velocity.normalized * value; }
-    }
-    private bool controlPadPressed
-    {
-        get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-    }
-    */
+
     void Awake()
     {
         rbody = GetComponent<Rigidbody>();
@@ -197,10 +172,9 @@ public class PhysPlayerController : MonoBehaviour {
 
     private void AllignToGravity()
     {
-
+        
     }
-
-    Vector3 _movement;
+    
     private void MovePlayer()
     {
         if (controlPadPressed)
