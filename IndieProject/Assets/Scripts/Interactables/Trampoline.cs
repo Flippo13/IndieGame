@@ -19,9 +19,9 @@ using UnityEngine;
 
         private void OnCollisionEnter(Collision other)
         {
-            float playerSpeed = player.Rigidbody.velocity.magnitude;
+            float playerSpeed = player.RigidBody.velocity.magnitude;
             Vector3 launchDirection = transform.up;
             Vector3 launchPower = launchDirection * playerSpeed * 0.1f;
-            player.Rigidbody.AddForce(launchPower, ForceMode.Impulse); 
+            player.RigidBody.AddForce(launchPower, ForceMode.Impulse); 
         }
     }

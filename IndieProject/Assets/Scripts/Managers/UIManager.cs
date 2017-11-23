@@ -2,12 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class UIManager : MonoBehaviour
+public class UIManager : ManagerBase
 {
     public Canvas hud;
-
     
-    private void Awake()
+    void Awake()
     {
         
     }

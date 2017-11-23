@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PhysPlayerController : MonoBehaviour {
 
     const float OFFMARGIN = 0.1f;
-
+    
     private Rigidbody rbody;
 
     public bool Enabled;
@@ -50,6 +50,7 @@ public class PhysPlayerController : MonoBehaviour {
         get { return Cursor.visible; }
         set { Cursor.visible = value; }
     }
+<<<<<<< HEAD
 
     private float _wallGrip;
     private bool _doubleJump;
@@ -77,8 +78,12 @@ public class PhysPlayerController : MonoBehaviour {
         get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
     }   
     public Rigidbody Rigidbody
+=======
+    
+    public Rigidbody RigidBody
+>>>>>>> Test_Branch
     {
-        get { return rbody;  }
+        get { return rbody; }
     }
 
     private bool isOnWall(float offMargin)
