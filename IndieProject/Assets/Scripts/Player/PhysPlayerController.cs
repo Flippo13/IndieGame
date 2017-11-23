@@ -13,6 +13,8 @@ public class PhysPlayerController : MonoBehaviour {
     public bool DebugMode;
     public Text DebugTexts;
 
+    public GameObject Hands;
+
     [Header("Player")]
     public bool UseFakeGravity;
     public Vector3 fakeGravity;
@@ -48,7 +50,33 @@ public class PhysPlayerController : MonoBehaviour {
         get { return Cursor.visible; }
         set { Cursor.visible = value; }
     }
-    
+
+    private float _wallGrip;
+    private bool _doubleJump;
+    private float _currentSpeed;
+    private bool _isRunnig = false;
+
+    #region 
+    private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
+    private float groundSpeed
+    {
+        get { return new Vector2(rbody.velocity.x, rbody.velocity.z).magnitude; }
+        set
+        {
+            Vector2 s = new Vector2(rbody.velocity.x, rbody.velocity.z).normalized * value;
+            rbody.velocity = new Vector3(s.x, rbody.velocity.y, s.y);
+        }
+    }
+    private float globalSpeed
+    {
+        get { return rbody.velocity.magnitude; }
+        set { rbody.velocity = rbody.velocity.normalized * value; }
+    }
+    private bool controlPadPressed
+    {
+        get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
+    }
+
     private bool isOnWall(float offMargin)
     {
         Vector3 dir;
@@ -61,26 +89,24 @@ public class PhysPlayerController : MonoBehaviour {
     }
     private bool isOnWall(float offMargin, out Vector3 direction, out RaycastHit hit)
     {
-            direction = Vector3.zero;
-            if (Physics.Raycast(transform.position, transform.right, out hit, 0.5f + offMargin))
-            {
-                direction = transform.right;
-                return true;
-            }
-            if (Physics.Raycast(transform.position, -transform.right, out hit, 0.5f + offMargin))
-            {
-                direction = -transform.right;
-                return true;
-            }
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 0.5f + offMargin))
-            {
-                direction = -transform.forward;
-                return true;
-            }
-            return false;
+        direction = Vector3.zero;
+        if (Physics.Raycast(transform.position, transform.right, out hit, 0.5f + offMargin))
+        {
+            direction = transform.right;
+            return true;
+        }
+        if (Physics.Raycast(transform.position, -transform.right, out hit, 0.5f + offMargin))
+        {
+            direction = -transform.right;
+            return true;
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 0.5f + offMargin))
+        {
+            direction = -transform.forward;
+            return true;
+        }
+        return false;
     }
-    
-    /// <param name="offMargin">Distance above the collider that still counts as grounded</param>
     private bool isGrounded(float offMargin)
     {
         return Physics.Raycast(transform.position, -transform.up, 1 + offMargin);
@@ -89,28 +115,7 @@ public class PhysPlayerController : MonoBehaviour {
     {
         return Physics.Raycast(transform.position, -transform.up, out hit, 1 + offMargin);
     }
-
-    private float _wallGrip;
-    private bool _doubleJump;
-    private float _currentSpeed;
-    private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
-    private bool _isRunnig = false;
-    private float groundSpeed {
-        get { return new Vector2(rbody.velocity.x, rbody.velocity.z).magnitude; }
-        set
-        {
-            Vector2 s = new Vector2(rbody.velocity.x, rbody.velocity.z).normalized * value;
-            rbody.velocity = new Vector3(s.x, rbody.velocity.y, s.y);
-        }
-    }
-    private float globalSpeed {
-        get { return rbody.velocity.magnitude; }
-        set { rbody.velocity = rbody.velocity.normalized * value; }
-    }
-    private bool controlPadPressed
-    {
-        get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-    }
+    #endregion
 
     void Awake()
     {
@@ -133,6 +138,12 @@ public class PhysPlayerController : MonoBehaviour {
             _wallGrip = wallGripStamina;
             _doubleJump = true;
         }
+
+        if(Physics.Raycast(Hands.transform.position, Vector3.down, OFFMARGIN))
+        {
+            _doubleJump = true;
+        }
+
         DebugTexts.text = "";
         if (Enabled)
         {
@@ -231,48 +242,6 @@ public class PhysPlayerController : MonoBehaviour {
             }
         }
     }
-    
-    /*
-    private void LimitVelocity()
-    {
-        Vector2 speed = new Vector2(rbody.velocity.x, rbody.velocity.z);
-        speed = speed.normalized * _currentSpeed;
-        //rbody.velocity = Vector3.Lerp(rbody.velocity, new Vector3(speed.x, rbody.velocity.y, speed.y), turnSpeed);
-        rbody.velocity = new Vector3(speed.x, rbody.velocity.y, speed.y);
-    }
-    /*
-    void MoveInDirection(KeyCode key, Vector3 direction)
-    {
-        if (Input.GetKey(key))
-        {
-            if (isRunnig)
-            {
-                rbody.AddForce(direction * runSpeed, ForceMode.VelocityChange);
-                if (Speed2D < walkSpeed)
-                {
-                    isRunnig = false;
-                }
-                _warmup = 0;
-            }
-            else
-            {
-                rbody.AddForce(direction * walkSpeed, ForceMode.VelocityChange);
-                if (_warmup >= speedUpTime)
-                {
-                    rbody.AddForce(direction * runSpeed / 2, ForceMode.Impulse);
-                    isRunnig = true;
-                }
-                _warmup += Time.deltaTime;
-            }
-        }
-    }
-    /**
-    private void OnCollisionEnter(Collision collision)
-    {
-        for(int a = 0; a < collision.contacts.Length; a++)
-        {
-            print(collision.gameObject + ": " + (transform.position - collision.contacts[a].point));
-        }
-    }
-    /**/
+
+
 }
