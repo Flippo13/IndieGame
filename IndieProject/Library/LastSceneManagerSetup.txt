@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Felix_Scene.unity
+- path: Assets/Scenes/GrayBox_Scene.unity
   isLoaded: 1
   isActive: 1
