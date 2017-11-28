@@ -8,16 +8,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject player;
     [SerializeField]
-    private GameObject egg;
-    [SerializeField]
-    private Transform spawnPos; 
-
-    [SerializeField]
     private float speed;
     [SerializeField]
     private Vector3 moveDirection;
     [SerializeField]
     private Vector3 velocity;
+    [SerializeField]
+    private GameObject egg;
+    [SerializeField]
+    private Transform spawnPos;
+    [SerializeField]
+    private Transform[] eggDropPos = new Transform[4]; 
 
     [SerializeField]
     private int maxDistanceFromPlayer;
@@ -42,12 +43,12 @@ public class EnemyController : MonoBehaviour
         distanceFromPlayer = transform.position - player.transform.position;
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
-        if(distanceFromPlayer.magnitude < 20f) 
+        if(distanceFromPlayer.magnitude < 80f) 
         dropTime -= Time.deltaTime;
 
         if (dropTime <= 0)
         {
-            DropEgg();
+            ChooseDropPos(); 
             dropTime = setDropTime; 
         }
         Move();
@@ -61,20 +62,22 @@ public class EnemyController : MonoBehaviour
             rb.AddForce(moveDirection * speed);
     }
 
-    private void DropEgg() 
+
+    private void ChooseDropPos()
     {
+        int index = Random.Range(0, eggDropPos.Length);
+        Debug.Log(index); 
+        DropEgg(index); 
+    }
+
+    private void DropEgg(int position) 
+    {
+        Vector3 dropPos = eggDropPos[position].position; 
+
         var droppedEgg =  Instantiate(egg, null, true);
-        droppedEgg.transform.position = spawnPos.position; 
+        droppedEgg.transform.position = new Vector3 (dropPos.x,spawnPos.position.y, spawnPos.position.z); 
         Debug.Log(droppedEgg.transform.position); 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Egg")
-        {
-            Debug.Log("Hit"); 
-            Destroy(other); 
-        }
-    }
-
+   
 }
