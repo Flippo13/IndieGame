@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 166
-    y: 77
-    width: 1628
-    height: 913
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
@@ -41,6 +41,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1628
     height: 863
   m_MinSize: {x: 683, y: 492}
@@ -55,6 +56,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 76
 >>>>>>> Alex_Branch
+=======
+    width: 1920
+    height: 947
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 9
+>>>>>>> Felix_Branch
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,6 +79,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1298
     y: 0
     width: 330
@@ -82,6 +92,14 @@ MonoBehaviour:
 >>>>>>> Alex_Branch
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    x: 1531
+    y: 0
+    width: 389
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Felix_Branch
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -104,6 +122,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 321
     height: 522
 =======
@@ -112,6 +131,12 @@ MonoBehaviour:
 >>>>>>> Alex_Branch
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 200
+    height: 642
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Felix_Branch
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -133,9 +158,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 522
     width: 1298
     height: 341
+=======
+    y: 642
+    width: 1531
+    height: 305
+>>>>>>> Felix_Branch
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 13}
@@ -171,9 +202,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1628
-    height: 913
-  m_MinSize: {x: 950, y: 542}
+    width: 1920
+    height: 997
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -191,7 +222,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1628
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -211,8 +242,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 893
-    width: 1628
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -235,9 +266,15 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1298
     height: 863
   m_MinSize: {x: 406, y: 492}
+=======
+    width: 1531
+    height: 947
+  m_MinSize: {x: 404, y: 492}
+>>>>>>> Felix_Branch
   m_MaxSize: {x: 10002, y: 14042}
 =======
     width: 1088
@@ -266,6 +303,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1298
     height: 522
 =======
@@ -274,6 +312,12 @@ MonoBehaviour:
 >>>>>>> Alex_Branch
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
+=======
+    width: 1531
+    height: 642
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
+>>>>>>> Felix_Branch
   vertical: 0
   controlID: 53
 --- !u!114 &11
@@ -291,6 +335,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 321
     y: 0
     width: 977
@@ -301,6 +346,12 @@ MonoBehaviour:
     width: 830
     height: 364
 >>>>>>> Alex_Branch
+=======
+    x: 200
+    y: 0
+    width: 1331
+    height: 642
+>>>>>>> Felix_Branch
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
@@ -359,6 +410,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 166
     y: 648
     width: 1296
@@ -369,6 +421,12 @@ MonoBehaviour:
     width: 1086
     height: 250
 >>>>>>> Alex_Branch
+=======
+    x: 0
+    y: 734
+    width: 1529
+    height: 284
+>>>>>>> Felix_Branch
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -381,15 +439,16 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Enemy
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/Enemy
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Saxion\2nd Year\2nd Period\IndieGame\IndieProject
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 97}
     m_SelectedIDs: ca2a0000
@@ -401,6 +460,12 @@ MonoBehaviour:
     m_LastClickedID: 10578
     m_ExpandedIDs: 00000000c0270000e42700005228000066280000e22d000000ca9a3bffffff7f
 >>>>>>> Alex_Branch
+=======
+    scrollPos: {x: 0, y: 197}
+    m_SelectedIDs: be290000
+    m_LastClickedID: 10686
+    m_ExpandedIDs: 00000000b6270000e2270000e627000068280000ae280000ce2800006a29000000ca9a3bffffff7f
+>>>>>>> Felix_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,10 +494,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000042a0000282a0000842a0000982a0000
 =======
     m_ExpandedIDs: 00000000c0270000e42700005228000066280000
 >>>>>>> Alex_Branch
+=======
+    m_ExpandedIDs: 00000000b6270000e2270000e627000068280000ae280000ce2800006a290000
+>>>>>>> Felix_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,7 +529,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
 =======
     m_SelectedInstanceIDs: fae6fdff
@@ -493,7 +562,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 190
+  m_DirectoriesAreaWidth: 299
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -517,6 +586,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1466
     y: 126
     width: 328
@@ -528,6 +598,13 @@ MonoBehaviour:
     height: 614
 >>>>>>> Alex_Branch
   m_ScrollPosition: {x: 0, y: 0}
+=======
+    x: 1533
+    y: 92
+    width: 387
+    height: 926
+  m_ScrollPosition: {x: 0, y: 447.95508}
+>>>>>>> Felix_Branch
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -557,6 +634,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 166
     y: 126
     width: 319
@@ -577,6 +655,17 @@ MonoBehaviour:
     m_LastClickedID: 14344
     m_ExpandedIDs: 2c6cdaffe8c8fcfffae6fdff1ce8fdff12f4ffff40f5ffff28f6ffff8efbffff0000000066370000083800002e38000044380000
 >>>>>>> Alex_Branch
+=======
+    x: 0
+    y: 92
+    width: 198
+    height: 621
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: be2c0000
+    m_LastClickedID: 11454
+    m_ExpandedIDs: a634faff22c8fbffaa1dfdff7afbffffa4fbffffa6fbffff00000000ca2c0000
+>>>>>>> Felix_Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +684,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - GrayBox_Scene
+  - Graybox
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -622,6 +711,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 489
     y: 126
     width: 973
@@ -636,10 +726,19 @@ MonoBehaviour:
   m_SceneLighting: 1
   lastFramingTime: 104071.4914636052
 >>>>>>> Alex_Branch
+=======
+    x: 202
+    y: 92
+    width: 1327
+    height: 621
+  m_SceneLighting: 1
+  lastFramingTime: 12838.333156114046
+>>>>>>> Felix_Branch
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: -0.53352356, y: 41.47776, z: -317.84485}
     speed: 2
@@ -649,6 +748,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 13.24032, y: 24.905432, z: 14.635857}
 >>>>>>> Alex_Branch
+=======
+    m_Target: {x: 25.386868, y: 3.9430141, z: -204.92062}
+    speed: 2
+    m_Value: {x: 25.386868, y: 3.9430141, z: -204.92062}
+>>>>>>> Felix_Branch
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -672,12 +776,17 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.20435932, y: 0.0035214669, z: -0.0007352952, w: -0.97888935}
+=======
+    m_Target: {x: -0.033245835, y: 0.060527075, z: -0.0020172102, w: -0.9976107}
+>>>>>>> Felix_Branch
     speed: 2
-    m_Value: {x: -0.20435932, y: 0.0035214669, z: -0.0007352952, w: -0.97888935}
+    m_Value: {x: -0.033245835, y: 0.060527075, z: -0.0020172102, w: -0.9976107}
   m_Size:
-    m_Target: 6.4965754
+    m_Target: 6.3411355
     speed: 2
+<<<<<<< HEAD
     m_Value: 6.4965754
 =======
     m_Target: {x: -0.23280309, y: 0.13573356, z: -0.032829683, w: -0.9624455}
@@ -688,6 +797,9 @@ MonoBehaviour:
     speed: 2
     m_Value: 64.55624
 >>>>>>> Alex_Branch
+=======
+    m_Value: 6.3411355
+>>>>>>> Felix_Branch
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -722,6 +834,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 489
     y: 126
     width: 973
@@ -732,6 +845,12 @@ MonoBehaviour:
     width: 826
     height: 343
 >>>>>>> Alex_Branch
+=======
+    x: 202
+    y: 92
+    width: 1327
+    height: 621
+>>>>>>> Felix_Branch
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -740,6 +859,7 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -486.5
     m_HBaseRangeMax: 486.5
@@ -751,6 +871,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -163
     m_VBaseRangeMax: 163
 >>>>>>> Alex_Branch
+=======
+    m_HBaseRangeMin: -663.5
+    m_HBaseRangeMax: 663.5
+    m_VBaseRangeMin: -302
+    m_VBaseRangeMax: 302
+>>>>>>> Felix_Branch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -768,6 +894,7 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 973
       height: 484
     m_Scale: {x: 1, y: 1}
@@ -778,12 +905,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 413, y: 163}
 >>>>>>> Alex_Branch
+=======
+      width: 1327
+      height: 604
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 663.5, y: 302}
+>>>>>>> Felix_Branch
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -486.5
       y: -242
@@ -795,15 +929,25 @@ MonoBehaviour:
       width: 826
       height: 326
 >>>>>>> Alex_Branch
+=======
+      x: -663.5
+      y: -302
+      width: 1327
+      height: 604
+>>>>>>> Felix_Branch
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 973, y: 501}
 =======
   m_LastWindowPixelSize: {x: 826, y: 343}
 >>>>>>> Alex_Branch
+=======
+  m_LastWindowPixelSize: {x: 1327, y: 621}
+>>>>>>> Felix_Branch
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -830,6 +974,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 166
     y: 648
     width: 1296
@@ -840,3 +985,9 @@ MonoBehaviour:
     width: 1086
     height: 250
 >>>>>>> Alex_Branch
+=======
+    x: 0
+    y: 734
+    width: 1529
+    height: 284
+>>>>>>> Felix_Branch
