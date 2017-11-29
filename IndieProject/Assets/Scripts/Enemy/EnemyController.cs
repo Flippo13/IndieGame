@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
         distanceFromPlayer = transform.position - player.transform.position;
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
-        if(distanceFromPlayer.magnitude < 80f) 
+        if(distanceFromPlayer.magnitude < 100f) 
         dropTime -= Time.deltaTime;
 
         if (dropTime <= 0)
@@ -56,9 +56,9 @@ public class EnemyController : MonoBehaviour
 
     private void Move()
     {
-        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && rb.velocity.magnitude > 2)
+        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && rb.velocity.magnitude > 20)
             rb.AddForce(moveDirection * -speed);
-        else if (rb.velocity.magnitude < 12f)
+        else if (rb.velocity.magnitude < 40f)
             rb.AddForce(moveDirection * speed);
     }
 
@@ -66,7 +66,6 @@ public class EnemyController : MonoBehaviour
     private void ChooseDropPos()
     {
         int index = Random.Range(0, eggDropPos.Length);
-        Debug.Log(index); 
         DropEgg(index); 
     }
 
@@ -76,7 +75,6 @@ public class EnemyController : MonoBehaviour
 
         var droppedEgg =  Instantiate(egg, null, true);
         droppedEgg.transform.position = new Vector3 (dropPos.x,spawnPos.position.y, spawnPos.position.z); 
-        Debug.Log(droppedEgg.transform.position); 
     }
 
    

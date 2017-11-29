@@ -4,14 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Egg
-  - Ground
-<<<<<<< HEAD
-  - Road
-=======
   - Car
->>>>>>> Felix_Branch
+  - Egg
   layers:
   - Default
   - TransparentFX
@@ -21,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - WallJump
+  - 
   - 
   - 
   - 
