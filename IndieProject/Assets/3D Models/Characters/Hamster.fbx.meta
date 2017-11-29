@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 359c97396357a5142916b24ca4f2e6cd
+timeCreated: 1511866689
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Hamster_Base_Mesh1
+    100004: Head
+    100006: Head_End
+    100008: L_Arm_Mid
+    100010: L_Arm_Start
+    100012: L_Ear_Start
+    100014: L_Foot_End
+    100016: L_Foot_End 1
+    100018: L_Foot_Start
+    100020: L_Foot_Start 1
+    100022: L_Leg_End
+    100024: L_Leg_Mid
+    100026: L_Leg_Start
+    100028: L_Shoulder
+    100030: Mass_Center
+    100032: R_Arm_Mid
+    100034: R_Arm_Start
+    100036: R_Ear_Start
+    100038: R_Leg_End
+    100040: R_Leg_Mid
+    100042: R_Leg_Start
+    100044: R_Shoulder
+    100046: Root
+    100048: Spain_01
+    100050: Spain_02
+    100052: Spain_03
+    400000: //RootNode
+    400002: Hamster_Base_Mesh1
+    400004: Head
+    400006: Head_End
+    400008: L_Arm_Mid
+    400010: L_Arm_Start
+    400012: L_Ear_Start
+    400014: L_Foot_End
+    400016: L_Foot_End 1
+    400018: L_Foot_Start
+    400020: L_Foot_Start 1
+    400022: L_Leg_End
+    400024: L_Leg_Mid
+    400026: L_Leg_Start
+    400028: L_Shoulder
+    400030: Mass_Center
+    400032: R_Arm_Mid
+    400034: R_Arm_Start
+    400036: R_Ear_Start
+    400038: R_Leg_End
+    400040: R_Leg_Mid
+    400042: R_Leg_Start
+    400044: R_Shoulder
+    400046: Root
+    400048: Spain_01
+    400050: Spain_02
+    400052: Spain_03
+    4300000: Hamster_Base_Mesh1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hamster_Base_Mesh1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hamster_Base_Mesh2
+    second: {fileID: 2100000, guid: e1a6bffeef06f254797615393cfe3edb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
