@@ -8,6 +8,6 @@ public class Spin : MonoBehaviour {
     public float RPM;
     
 	void FixedUpdate () {
-        transform.Rotate(axis * RPM * Time.deltaTime * 6);
+        transform.Rotate(axis * RPM * 6 * Time.deltaTime);
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PhysPlayerController : MonoBehaviour {
 
-    const float OFFMARGIN = 0.1f;
+    const float OFFMARGIN = 0.2f;
     
     private Rigidbody rbody;
 
@@ -13,52 +13,37 @@ public class PhysPlayerController : MonoBehaviour {
     public bool DebugMode;
     public Text DebugTexts;
 
-    public GameObject Hands;
+    public enum MovementState { Normal, WallRun, Tunnel }
+    private MovementState state;
 
-    [Header("Player")]
-    public bool UseFakeGravity;
-    public Vector3 fakeGravity;
+    [Header("Normal Movement")]
+    //public bool UseFakeGravity;
+    //public Vector3 fakeGravity;
+
+    public float slowSpeed;
+    public float runSpeed;
+    public float turnSpeed;
+    public float acceleration;
+    public float jumpPower;
     
-    public float startSpeed;
-    public float maxSpeed;
-    public float speedUp;
-    public float jumpHeight;
     public float doubleJumpModifier;
-    public float wallGripStrength;
-    public float wallGripStamina;
 
-    [Header("Camera")]
-    public Camera playerCamera;
-    public float distance;
-    [SerializeField]
-    [Range(-45, 45)]
-    private float _angle;
-    [SerializeField]
-    private bool _showCursor;
+    [Header("WallRun")]
+    public float wallRunDistance;
+    [Range(0.05f, 0.95f)]
+    public float wallRunStrength;
+    public float wallRunStamina;
+    public float wallRunSpeed;
+    public float wallJump;
 
-    public float angle
-    {
-        get { return playerCamera.transform.rotation.eulerAngles.z; }
-        set
-        {
-            playerCamera.transform.rotation = Quaternion.Euler(value, playerCamera.transform.rotation.eulerAngles.y, 0);
-            MoveCamera();
-        }
-    }
-    public bool showCursor
-    {
-        get { return Cursor.visible; }
-        set { Cursor.visible = value; }
-    }
-<<<<<<< HEAD
-
+    private bool exaust;
+    private float _currentSpeed;
+    private float _maxSpeed;
     private float _wallGrip;
     private bool _doubleJump;
-    private float _currentSpeed;
-    private bool _isRunnig = false;
 
     #region 
-    private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
+    //private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
     private float groundSpeed
     {
         get { return new Vector2(rbody.velocity.x, rbody.velocity.z).magnitude; }
@@ -76,14 +61,37 @@ public class PhysPlayerController : MonoBehaviour {
     private bool controlPadPressed
     {
         get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-    }   
-    public Rigidbody Rigidbody
-=======
+    }
     
     public Rigidbody RigidBody
->>>>>>> Test_Branch
     {
         get { return rbody; }
+    }
+
+    /// <summary>Returns </summary>
+    /// <returns>0: - No Wall. 1: Wall on Right. 2: Wall on Left.</returns>
+    private int isOnWall(out Vector3 wallNormal)
+    {
+        RaycastHit hit;
+        wallNormal = Vector3.zero;
+        bool[] side = new bool[2] { false, false };
+        for (int s = 0; s < side.Length; s++)
+        {
+            Vector3 back = (transform.right * (2 * s - 1) - transform.forward).normalized;
+            Vector3 front = (transform.right * (2 * s - 1) + transform.forward).normalized;
+            side[s] = 
+                Physics.Raycast(transform.position, back, wallRunDistance)&&
+                Physics.Raycast(transform.position, front, wallRunDistance);
+            if (Physics.Raycast(transform.position, front, out hit, wallRunDistance))
+            {
+                Vector3 disToWall = hit.collider.ClosestPoint(transform.position) - transform.position;
+                if (wallNormal == Vector3.zero || disToWall.magnitude < wallNormal.magnitude)
+                wallNormal = disToWall;
+            }
+        }
+        if (side[0]) return 1; else
+        if (side[1]) return 2; else
+        return 0;
     }
 
     private bool isOnWall(float offMargin)
@@ -125,52 +133,24 @@ public class PhysPlayerController : MonoBehaviour {
         return Physics.Raycast(transform.position, -transform.up, out hit, 1 + offMargin);
     }
     #endregion
-    /*
-    private float _wallGrip;
-    private bool _doubleJump;
-    private float _currentSpeed;
-    private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
-    private bool _isRunnig = false;
-    private float groundSpeed {
-        get { return new Vector2(rbody.velocity.x, rbody.velocity.z).magnitude; }
-        set
-        {
-            Vector2 s = new Vector2(rbody.velocity.x, rbody.velocity.z).normalized * value;
-            rbody.velocity = new Vector3(s.x, rbody.velocity.y, s.y);
-        }
-    }
-    public float globalSpeed {
-        get { return rbody.velocity.magnitude; }
-        set { rbody.velocity = rbody.velocity.normalized * value; }
-    }
-    private bool controlPadPressed
-    {
-        get { return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A); }
-    }
-    */
+
     void Awake()
     {
         rbody = GetComponent<Rigidbody>();
         if (rbody == null) gameObject.AddComponent<Rigidbody>();
         Debug.Assert(rbody != null, gameObject.name + ": No RigidBody Attached.");
-        Debug.Assert(playerCamera != null, gameObject.name + ": No Camera Attached.");
     }
 
     void Start()
     {
-        _currentSpeed = startSpeed;
-        _wallGrip = wallGripStamina;
+        _maxSpeed = runSpeed;
+        _wallGrip = 0;
     }
 
     private void FixedUpdate()
     {
+        Debug.DrawRay(transform.position, rbody.velocity * 4, Color.blue);
         if (isGrounded(OFFMARGIN))
-        {
-            _wallGrip = wallGripStamina;
-            _doubleJump = true;
-        }
-
-        if(Physics.Raycast(Hands.transform.position, Vector3.down, OFFMARGIN))
         {
             _doubleJump = true;
         }
@@ -180,58 +160,116 @@ public class PhysPlayerController : MonoBehaviour {
         {
             AllignToGravity();
             MovePlayer();
-            WallRun();
-            MoveCamera();
         }
         if (DebugMode)
         {
             DebugTexts.text += string.Format("\nPlayer Velocity: [{0}]\nSpeed: {1}m/s", rbody.velocity.ToString(), Mathf.Floor(globalSpeed));
         }
     }
-
-    public void MoveCamera()
-    {
-        if (playerCamera == null) return;
-        playerCamera.transform.position = transform.position - (playerCamera.transform.forward * distance);
-    }
-
+    
     private void AllignToGravity()
     {
-
+        
     }
-
-    Vector3 _movement;
+    
     private void MovePlayer()
     {
-        if (controlPadPressed)
-        {
-            if(_currentSpeed < maxSpeed) _currentSpeed += speedUp * Time.deltaTime;
-        }
-        else
-        {
-            if(_currentSpeed > startSpeed) _currentSpeed -= speedUp * 10 * Time.deltaTime;
-        }
+        Vector3 wallNormal;
+        int side = isOnWall(out wallNormal);
+        state = MovementState.Normal;
 
-        if (Input.GetKey(KeyCode.W))
+        if (!isGrounded(OFFMARGIN) && side != 0 && _wallGrip < wallRunStamina && !exaust)
         {
-            rbody.AddForce(transform.forward, ForceMode.VelocityChange);
+            state = MovementState.WallRun;
+            
+            rbody.velocity = Vector3.Cross(wallNormal * (side == 2 ? 1 : -1), transform.up).normalized * rbody.velocity.magnitude;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (_wallGrip > 0 && state != MovementState.WallRun) _wallGrip -= Time.deltaTime * wallRunStrength; else exaust = false;
+        //print("Grip: " + _wallGrip);
+        //print("State " + state);
+
+        switch (state)
         {
-            rbody.AddForce(-transform.forward, ForceMode.VelocityChange);
+            case MovementState.Normal: NormalMovement(); break;
+            case MovementState.WallRun:  WallMovement(wallNormal, side); break;
+            case MovementState.Tunnel: TunnelMovement(); break;
         }
-        if (Input.GetKey(KeyCode.D))
+        print(transform.forward);
+        rbody.AddForce(transform.forward * acceleration, ForceMode.Acceleration);
+    }
+
+    private void NormalMovement()
+    {
+        if (isGrounded(OFFMARGIN))
         {
-            rbody.AddForce(transform.right, ForceMode.VelocityChange);
+            if (Input.GetKey(KeyCode.D)) transform.Rotate(transform.up * turnSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.A)) transform.Rotate(-transform.up * turnSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rbody.AddForce(-transform.right, ForceMode.VelocityChange);
-        }
-        if(groundSpeed > _currentSpeed) groundSpeed = _currentSpeed;
+        if (Input.GetKey(KeyCode.S)) _maxSpeed = slowSpeed; else _maxSpeed = runSpeed;
 
         if (Input.GetKeyDown(KeyCode.Space)) CallJump();
-        
+
+        if (rbody.velocity.magnitude > _maxSpeed)
+        {
+            rbody.AddForce(transform.forward * rbody.velocity.magnitude, ForceMode.Acceleration);
+        }
+    }
+
+    private void WallMovement(Vector3 wallNormal, int side)
+    {
+        //print(_wallGrip);
+        _wallGrip += Time.deltaTime / wallRunStrength;
+
+        int wSide = side == 2 ? 1 : -1;
+        //wallNormal *= wSide;
+
+        Vector3 forward = Vector3.Cross(wallNormal * wSide, transform.up).normalized;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forward, transform.up), OFFMARGIN);
+        //transform.rotation = Quaternion.LookRotation(forward, transform.up);
+
+
+        float offDistance = OFFMARGIN + 0.5f - wallNormal.magnitude;
+        if(offDistance > 0)
+        {
+            transform.position += wallNormal.normalized * offDistance;
+        }
+
+        KeyCode grabKey = KeyCode.A;
+        KeyCode letGoKey = KeyCode.D;
+
+        if (side == 2)
+        {
+            grabKey = KeyCode.D;
+            letGoKey = KeyCode.A;
+        }
+
+        if (Input.GetKey(grabKey) && _wallGrip < wallRunStamina)
+        {
+            rbody.AddForce(transform.up * wallRunSpeed, ForceMode.Impulse);
+            
+            if(Vector3.Dot(wallNormal * wSide, rbody.velocity) > 0)
+            {
+                rbody.AddForce(-wallNormal * wSide, ForceMode.VelocityChange);
+            }
+        }
+        if (Input.GetKey(letGoKey) || _wallGrip >= wallRunStamina)
+        {
+            exaust = true;
+
+            rbody.velocity -= wallNormal * wSide * wallJump;
+            state = MovementState.Normal;
+        }
+    }
+
+    private void OnGUI()
+    {
+        GUI.TextField(new Rect(100, 60, 200, 20), rbody.velocity.ToString());
+        GUI.TextField(new Rect(100, 80, 200, 20), rbody.velocity.magnitude.ToString());
+    }
+
+    private void TunnelMovement()
+    {
+
     }
 
     private void CallJump()
@@ -239,40 +277,18 @@ public class PhysPlayerController : MonoBehaviour {
         RaycastHit hit;
         if (isGrounded(OFFMARGIN, out hit))
         {
-            Jump(jumpHeight);
+            Jump(jumpPower);
             return;
         }
-        else if(_doubleJump)
+        else if(_doubleJump && Vector3.Dot(transform.up, rbody.velocity) < 2f)
         {
             _doubleJump = false;
-            Jump(jumpHeight * doubleJumpModifier);
+            Jump(jumpPower * doubleJumpModifier);
         }
     }
 
     private void Jump(float force)
     {
-        rbody.AddForce(transform.up * force, ForceMode.VelocityChange);
+        rbody.AddForce(transform.up * force, ForceMode.Impulse);
     }
-
-    private void WallRun()
-    {
-        //print(_wallGrip);
-        Vector3 direction;
-        if (!isGrounded(OFFMARGIN) && isOnWall(OFFMARGIN, out direction))
-        {
-            if(_wallGrip > 0)
-            {
-                _wallGrip -= Time.deltaTime;
-                float forceOnWall = Vector3.Dot(direction, rbody.velocity);
-                rbody.AddForce(-direction * wallGripStrength, ForceMode.VelocityChange);
-                rbody.AddForce(transform.up * forceOnWall, ForceMode.VelocityChange);
-            }
-            else
-            {
-                rbody.AddForce(-direction * wallGripStrength * 2, ForceMode.VelocityChange);
-            }
-        }
-    }
-
-
 }

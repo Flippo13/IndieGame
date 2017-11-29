@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114987172275260202}
   - component: {fileID: 114725696262312514}
   m_Layer: 0
-  m_Name: Player 2.0
+  m_Name: Player 2.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433379349714746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 18, z: 22}
+  m_LocalPosition: {x: 15, y: 22, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4346114683171752}
@@ -191,20 +191,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enabled: 1
   DebugMode: 1
-  UseFakeGravity: 0
   DebugTexts: {fileID: 0}
-  fakeGravity: {x: 0, y: 0, z: 0}
-  startSpeed: 2.5
-  maxSpeed: 16
-  speedUp: 1.15
-  jumpHeight: 10
-  doubleJumpModifier: 1
+  slowSpeed: 5
+  runSpeed: 2
+  turnSpeed: 45
+  jumpPower: 35
+  doubleJumpModifier: 1.2
   wallGripStrength: 1.5
-  wallGripStamina: 5
-  playerCamera: {fileID: 0}
-  distance: 5
-  _angle: 15
-  _showCursor: 0
+  wallGripStamina: 3
 --- !u!136 &136681878383743302
 CapsuleCollider:
   m_ObjectHideFlags: 1
