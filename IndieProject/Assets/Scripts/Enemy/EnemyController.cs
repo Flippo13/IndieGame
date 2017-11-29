@@ -8,16 +8,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject player;
     [SerializeField]
-    private GameObject egg;
-    [SerializeField]
-    private Transform spawnPos; 
-
-    [SerializeField]
     private float speed;
     [SerializeField]
     private Vector3 moveDirection;
     [SerializeField]
     private Vector3 velocity;
+    [SerializeField]
+    private GameObject egg;
+    [SerializeField]
+    private Transform spawnPos;
+    [SerializeField]
+    private Transform[] eggDropPos = new Transform[4]; 
 
     [SerializeField]
     private int maxDistanceFromPlayer;
@@ -42,12 +43,12 @@ public class EnemyController : MonoBehaviour
         distanceFromPlayer = transform.position - player.transform.position;
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
-        if(distanceFromPlayer.magnitude < 20f) 
+        if(distanceFromPlayer.magnitude < 100f) 
         dropTime -= Time.deltaTime;
 
         if (dropTime <= 0)
         {
-            DropEgg();
+            ChooseDropPos(); 
             dropTime = setDropTime; 
         }
         Move();
@@ -55,26 +56,26 @@ public class EnemyController : MonoBehaviour
 
     private void Move()
     {
-        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && rb.velocity.magnitude > 2)
+        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && rb.velocity.magnitude > 20)
             rb.AddForce(moveDirection * -speed);
-        else if (rb.velocity.magnitude < 12f)
+        else if (rb.velocity.magnitude < 40f)
             rb.AddForce(moveDirection * speed);
     }
 
-    private void DropEgg() 
+
+    private void ChooseDropPos()
     {
+        int index = Random.Range(0, eggDropPos.Length);
+        DropEgg(index); 
+    }
+
+    private void DropEgg(int position) 
+    {
+        Vector3 dropPos = eggDropPos[position].position; 
+
         var droppedEgg =  Instantiate(egg, null, true);
-        droppedEgg.transform.position = spawnPos.position; 
-        Debug.Log(droppedEgg.transform.position); 
+        droppedEgg.transform.position = new Vector3 (dropPos.x,spawnPos.position.y, spawnPos.position.z); 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Egg")
-        {
-            Debug.Log("Hit"); 
-            Destroy(other); 
-        }
-    }
-
+   
 }

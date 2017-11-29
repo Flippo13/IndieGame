@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - Car
   - Egg
-  - Ground
-  - Road
   layers:
   - Default
   - TransparentFX
@@ -17,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - WallJump
+  - 
   - 
   - 
   - 

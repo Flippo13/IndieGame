@@ -195,7 +195,7 @@ public class PhysPlayerController : MonoBehaviour {
             case MovementState.Tunnel: TunnelMovement(); break;
         }
         print(transform.forward);
-        rbody.AddForce(transform.forward * acceleration, ForceMode.Impulse);
+        rbody.AddForce(transform.forward * acceleration, ForceMode.Acceleration);
     }
 
     private void NormalMovement()
@@ -211,7 +211,7 @@ public class PhysPlayerController : MonoBehaviour {
 
         if (rbody.velocity.magnitude > _maxSpeed)
         {
-            rbody.AddForce(-transform.forward * rbody.velocity.magnitude, ForceMode.Impulse);
+            rbody.AddForce(transform.forward * rbody.velocity.magnitude, ForceMode.Acceleration);
         }
     }
 

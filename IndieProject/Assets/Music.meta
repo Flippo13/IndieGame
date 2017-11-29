@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:IndieProject/Assets/Scripts/Utils.meta
+=======
+<<<<<<< HEAD:IndieProject/Assets/Music.meta
+guid: 3d90fa4c3c549ec44b2dde13a126fd91
+folderAsset: yes
+timeCreated: 1511449964
+=======
+>>>>>>> Test_Branch
+<<<<<<< HEAD:IndieProject/Assets/Particles.meta
+guid: 11042392403917044aef90e099fa4628
+folderAsset: yes
+timeCreated: 1511447655
+=======
+guid: a6961eedf844f4e439eb4e12ee0ac946
+folderAsset: yes
+timeCreated: 1511436849
+>>>>>>> Test_Branch:IndieProject/Assets/Scripts/Utils.meta
+<<<<<<< HEAD
+=======
+guid: 3d90fa4c3c549ec44b2dde13a126fd91
+folderAsset: yes
+timeCreated: 1511449964
+>>>>>>> Test_Branch:IndieProject/Assets/Music.meta
+=======
+>>>>>>> Alex_Branch:IndieProject/Assets/Scripts/Utils.meta
+>>>>>>> Test_Branch
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
