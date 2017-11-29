@@ -1,22 +1,34 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using System.Collections.Generic;
 
 public class UIManager : ManagerBase
 {
     public Canvas hud;
+    private Dictionary<string, Component> addressBook = new Dictionary<string, Component>();
     
-    void Awake()
+    public static T GetUIElement<T>(string Name, bool Save = false) where T : Component
     {
-        
+        if (GameManager.instance == null || GameManager.instance.userInterface == null) return null;
+        return GameManager.instance.userInterface.GetUI<T>(Name, Save);
     }
 
-    void Start()
+    public T GetUI<T>(string Name, bool Save = false) where T : Component
+    {
+        if (addressBook.ContainsKey(Name)) return addressBook[Name].GetComponent<T>();
+        GameObject obj = hud.transform.Find(Name).gameObject;
+        if (obj == null) return null;
+        T ui = obj.GetComponent<T>();
+        if (ui != null && Save) addressBook.Add(Name, ui);
+        return ui;
+    }
+
+    public override void OnSceneEnter()
     {
 
     }
-    
-    void Update()
+
+    public override void OnSceneExit()
     {
 
     }
