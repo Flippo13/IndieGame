@@ -9,10 +9,11 @@ public class GameManager : ManagerBase {
     
     private List<ManagerBase> managers;
 
-    [HideInInspector] public UIManager userInterface;
-    [HideInInspector] public AchievementManager achievements;
-    [HideInInspector] public ScoreManager score;
-    [HideInInspector] public SaveManager save;
+    [HideInInspector] public UIManager UserInterface;
+    [HideInInspector] public AchievementManager Achievements;
+    [HideInInspector] public ScoreManager Score;
+    [HideInInspector] public SaveManager Save;
+    //[HideInInspector] public AudioManager Audio;
 
     private void Awake()
     {
@@ -34,10 +35,11 @@ public class GameManager : ManagerBase {
     {
         managers = new List<ManagerBase>();
 
-        userInterface = GetSingleManager<UIManager>();
-        achievements = GetSingleManager<AchievementManager>();
-        score = GetSingleManager<ScoreManager>();
-        save = GetSingleManager<SaveManager>();
+        UserInterface = GetSingleManager<UIManager>();
+        Achievements = GetSingleManager<AchievementManager>();
+        Score = GetSingleManager<ScoreManager>();
+        Save = GetSingleManager<SaveManager>();
+        //Audio = GetSingleManager<AudioManager>();
 
         managers.AddRange(gameObject.GetComponents<ManagerBase>());
         foreach (ManagerBase m in managers)

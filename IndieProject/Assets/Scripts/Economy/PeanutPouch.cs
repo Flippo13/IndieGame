@@ -22,11 +22,11 @@ public class PeanutPouch : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PeanutCollectable pc = other.GetComponent<PeanutCollectable>();
-        if(pc != null && !pc.pickedUp)
+        if(pc != null && pc.attractor == null)
         {
-            pc.pickedUp = true;
+            AudioSource.PlayClipAtPoint(pc.collectSound, pc.transform.position);
+            pc.Collect(gameObject);
             AddCollectible(pc.nut, pc.worth);
-            Destroy(pc.gameObject);
         }
     }
 
