@@ -9,8 +9,8 @@ public class UIManager : ManagerBase
     
     public static T GetUIElement<T>(string Name, bool Save = false) where T : Component
     {
-        if (GameManager.instance == null || GameManager.instance.userInterface == null) return null;
-        return GameManager.instance.userInterface.GetUI<T>(Name, Save);
+        if (GameManager.instance == null || GameManager.instance.UserInterface == null) return null;
+        return GameManager.instance.UserInterface.GetUI<T>(Name, Save);
     }
 
     public T GetUI<T>(string Name, bool Save = false) where T : Component
