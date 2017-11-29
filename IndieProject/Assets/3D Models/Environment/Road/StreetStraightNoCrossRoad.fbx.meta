@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3fa4bcc37f0c4ab49875f9060e15e4d9
-timeCreated: 1511951067
+guid: d429c1d2c0dbec44582ae04714c97f93
+timeCreated: 1511955456
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StreetStraight_NoCrossRoad
-    second: {fileID: 2100000, guid: e58cb98fc5a22f1478da78cefa79299b, type: 2}
+    second: {fileID: 2100000, guid: b5df2c7a0399d7948886d0b70bfb1ca9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
