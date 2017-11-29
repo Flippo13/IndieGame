@@ -22,7 +22,7 @@ public  class Car : Obstacles
         transform.Translate(Vector3.left * speed * Time.deltaTime, Space.Self); 
     }
 
-    protected override void OnHit(PhysPlayerController player)
+    protected override void OnHit(PlayerController_Felix player)
     {
         Debug.Log("Player hit Obstacle"); 
 

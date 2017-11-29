@@ -43,6 +43,7 @@ public class PlayerController_Felix : MonoBehaviour
     public float _maxSpeed;
     private float _wallGrip;
     private bool _doubleJump;
+    private float invincibilityTime;
 
     #region 
     //private Vector3 _gravity { get { return UseFakeGravity ? fakeGravity : Physics.gravity; } }
@@ -69,6 +70,8 @@ public class PlayerController_Felix : MonoBehaviour
     {
         get { return rbody; }
     }
+
+    public bool invincibility { get; private set; }
 
     /// <summary>Returns </summary>
     /// <returns>0: - No Wall. 1: Wall on Right. 2: Wall on Left.</returns>
@@ -123,7 +126,7 @@ public class PlayerController_Felix : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, transform.forward, out hit, 0.5f + offMargin))
         {
-            direction = -transform.forward;
+            direction = transform.forward;
             return true;
         }
         return false;
@@ -157,6 +160,15 @@ public class PlayerController_Felix : MonoBehaviour
         if (isGrounded(OFFMARGIN))
         {
             _doubleJump = true;
+        }
+
+        if (invincibility)
+        {
+            invincibilityTime -= Time.deltaTime; 
+            if(invincibilityTime <= 0)
+            {
+                invincibility = false; 
+            }
         }
 
         DebugTexts.text = "";
@@ -246,7 +258,7 @@ public class PlayerController_Felix : MonoBehaviour
             grabKey = KeyCode.D;
             letGoKey = KeyCode.A;
         }
-
+        Debug.Log("wallNormal " + wallNormal); 
         if (Input.GetKey(grabKey) && _wallGrip < wallRunStamina)
         {
             rbody.AddForce(transform.up * wallRunSpeed, ForceMode.Impulse);
@@ -294,5 +306,13 @@ public class PlayerController_Felix : MonoBehaviour
     private void Jump(float force)
     {
         rbody.AddForce(transform.up * force, ForceMode.Impulse);
+    }
+
+    public void ObstacleHit()
+    {
+        //TODO: Play ObstacleHit Animation
+        invincibility = true; 
+        rbody.velocity = Vector3.zero; 
+        rbody.AddForce(-transform.forward * 10, ForceMode.VelocityChange); 
     }
 }

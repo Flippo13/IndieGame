@@ -241,6 +241,7 @@
     <Compile Include="Assets\Scripts\Obstacles\Car.cs" />
     <Compile Include="Assets\Scripts\Obstacles\CarSpawner.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Obstacles.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\RoadObstacle.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\PhysPlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />

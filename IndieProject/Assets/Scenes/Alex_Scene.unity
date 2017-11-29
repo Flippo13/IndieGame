@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2215,7 +2215,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757056622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -363, y: 143, z: 0}
+  m_LocalPosition: {x: -436.5, y: 222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1042293285}
@@ -3534,7 +3534,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042293281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413, y: 163, z: 0}
+  m_LocalPosition: {x: 486.5, y: 242, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 757056623}
@@ -4001,7 +4001,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1179672940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -363, y: 113, z: 9}
+  m_LocalPosition: {x: -436.5, y: 192, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1042293285}
@@ -5450,6 +5450,11 @@ Prefab:
       propertyPath: wallJump
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114987172275260202, guid: c15ecefb5a31dc242a63442c36cd4101,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c15ecefb5a31dc242a63442c36cd4101, type: 2}
   m_IsPrefabParent: 0
@@ -5797,6 +5802,32 @@ GameObject:
   m_PrefabParentObject: {fileID: 1433379349714746, guid: c15ecefb5a31dc242a63442c36cd4101,
     type: 2}
   m_PrefabInternal: {fileID: 1689213674}
+--- !u!114 &1856550738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856550737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed01bb88d1ee914e87caa534cad3dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  DebugMode: 0
+  DebugTexts: {fileID: 1179672942}
+  slowSpeed: -5
+  setRunSpeed: 20
+  turnSpeed: 65
+  acceleration: 0
+  jumpPower: 45
+  doubleJumpModifier: 1.3
+  wallRunDistance: 3
+  wallRunStrength: 0.95
+  wallRunStamina: 3
+  wallRunSpeed: 20
+  wallJump: 20
+  _maxSpeed: 30
 --- !u!1 &1863972377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,7 +6616,7 @@ Transform:
   m_PrefabInternal: {fileID: 2018561708}
   m_GameObject: {fileID: 2070349758}
   m_LocalRotation: {x: 0.1736482, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 15, y: 23.710104, z: -35.292255}
+  m_LocalPosition: {x: 15, y: 23.710104, z: -35.798454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
