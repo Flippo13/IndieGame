@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f626fe51e463d1e44942bb153e486dc0
 folderAsset: yes
 timeCreated: 1511960701
+=======
+guid: d50a515e558c0f34aae9c05714805061
+folderAsset: yes
+timeCreated: 1511963059
+>>>>>>> Yulislav_Branch
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

@@ -1,8 +1,12 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/Development/Alex_Scene.unity
 =======
 - path: Assets/Scenes/Danny_Scene.unity
 >>>>>>> Danny_Branch
+=======
+- path: Assets/Scenes/FirstLevel.unity
+>>>>>>> Yulislav_Branch
   isLoaded: 1
   isActive: 1

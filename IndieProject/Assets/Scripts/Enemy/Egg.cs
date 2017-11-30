@@ -60,11 +60,10 @@ public class Egg : MonoBehaviour {
 
     private void Break()
     {
-
         int chosenObject = Random.Range(0, spawnableObjects.Length);
         //Play break animation
-        Destroy(this); 
-        GameObject spawnedObject = Instantiate(spawnableObjects[chosenObject], this.transform.position, Quaternion.identity); 
+        GameObject spawnedObject = Instantiate(spawnableObjects[chosenObject], this.transform.position, Quaternion.identity);
+        Destroy(gameObject); 
     }
 
 }

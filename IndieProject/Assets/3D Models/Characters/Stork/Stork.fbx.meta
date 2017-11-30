@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 0a585234df59f0c458c7fb3670000bd0
+timeCreated: 1511966106
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: C_Spain_1
+    100002: C_Spain_2
+    100004: C_Spain_3
+    100006: C_Spain_4
+    100008: Head
+    100010: Head_End
+    100012: L_Calf
+    100014: L_Foot
+    100016: L_Hip
+    100018: L_Knee
+    100020: L_Wing_Avula_1
+    100022: L_Wing_Avula_2
+    100024: L_Wing_Covers_2
+    100026: L_Wing_Coverts_1
+    100028: L_Wing_End
+    100030: L_Wing_Primaries
+    100032: L_Wing_Scapulars
+    100034: L_Wing_Start
+    100036: Legs
+    100038: Main_Ctrl
+    100040: Main_Root
+    100042: Mouth_End
+    100044: Mouth_Start
+    100046: R_Calf
+    100048: R_Foot
+    100050: R_Hip
+    100052: R_Knee
+    100054: R_Wing_Avula_1
+    100056: R_Wing_Avula_2
+    100058: R_Wing_Covers_2
+    100060: R_Wing_Coverts_1
+    100062: R_Wing_End
+    100064: R_Wing_Primaries
+    100066: R_Wing_Scapulars
+    100068: R_Wing_Start
+    100070: //RootNode
+    100072: Stork
+    100074: Tail_Beginning
+    100076: Tail_Bone
+    100078: Tail_End
+    400000: C_Spain_1
+    400002: C_Spain_2
+    400004: C_Spain_3
+    400006: C_Spain_4
+    400008: Head
+    400010: Head_End
+    400012: L_Calf
+    400014: L_Foot
+    400016: L_Hip
+    400018: L_Knee
+    400020: L_Wing_Avula_1
+    400022: L_Wing_Avula_2
+    400024: L_Wing_Covers_2
+    400026: L_Wing_Coverts_1
+    400028: L_Wing_End
+    400030: L_Wing_Primaries
+    400032: L_Wing_Scapulars
+    400034: L_Wing_Start
+    400036: Legs
+    400038: Main_Ctrl
+    400040: Main_Root
+    400042: Mouth_End
+    400044: Mouth_Start
+    400046: R_Calf
+    400048: R_Foot
+    400050: R_Hip
+    400052: R_Knee
+    400054: R_Wing_Avula_1
+    400056: R_Wing_Avula_2
+    400058: R_Wing_Covers_2
+    400060: R_Wing_Coverts_1
+    400062: R_Wing_End
+    400064: R_Wing_Primaries
+    400066: R_Wing_Scapulars
+    400068: R_Wing_Start
+    400070: //RootNode
+    400072: Stork
+    400074: Tail_Beginning
+    400076: Tail_Bone
+    400078: Tail_End
+    4300000: Stork
+    7400000: Flying
+    9500000: //RootNode
+    13700000: Stork
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stork_Material
+    second: {fileID: 2100000, guid: cd60d37a29bb67d49b8bd887ce594c00, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flying
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
