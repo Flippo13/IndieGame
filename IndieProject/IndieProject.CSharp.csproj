@@ -231,6 +231,8 @@
     <Compile Include="Assets\Scripts\Enemy\Egg.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMovementOnRail.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyPath.cs" />
     <Compile Include="Assets\Scripts\Interactables\Boost.cs" />
     <Compile Include="Assets\Scripts\Interactables\DimensionHole.cs" />
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
@@ -242,6 +244,8 @@
     <Compile Include="Assets\Scripts\Obstacles\CarSpawner.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Obstacles.cs" />
     <Compile Include="Assets\Scripts\Obstacles\RoadObstacle.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\StorkWall.cs" />
+    <Compile Include="Assets\Scripts\PlaceHolderGameScreens\WinLoseScreen.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\PhysPlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />

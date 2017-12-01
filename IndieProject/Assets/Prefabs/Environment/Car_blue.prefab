@@ -56,8 +56,11 @@ GameObject:
   - component: {fileID: 33594509879760980}
   - component: {fileID: 23364587872137214}
   - component: {fileID: 95382079256311054}
+  - component: {fileID: 114041907113003598}
+  - component: {fileID: 54095138941294270}
+  - component: {fileID: 65507402453030940}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Car_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589124582113234}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 238.65274, y: 97.14369, z: 136.00653}
+  m_LocalPosition: {x: -4.125931, y: 4.6, z: 44.359924}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4307006105330422}
@@ -371,6 +374,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589124582113234}
   m_Mesh: {fileID: 4300000, guid: 75ab599414989cf4ba8245ae1c4c737d, type: 3}
+--- !u!54 &54095138941294270
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589124582113234}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65507402453030940
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589124582113234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 413.27975, y: 470.7224, z: 856.39417}
+  m_Center: {x: 0, y: 35.568573, z: 0}
 --- !u!95 &95382079256311054
 Animator:
   serializedVersion: 3
@@ -388,3 +418,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114041907113003598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589124582113234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 862239fbaa3c69e4bbb5739c4a59f52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speed: 4
+  isObstacle: 1

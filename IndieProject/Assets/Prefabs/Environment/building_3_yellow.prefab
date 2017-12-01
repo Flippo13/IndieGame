@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33113585263916014}
   - component: {fileID: 23240927950609496}
   - component: {fileID: 95358465857731438}
+  - component: {fileID: 114987995995700296}
+  - component: {fileID: 65601442379928088}
   m_Layer: 0
   m_Name: building_3_yellow
   m_TagString: Untagged
@@ -35,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917992007059394}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.75507, y: 80.153145, z: 140.58}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 990, y: 7.66, z: 654.8459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917992007059394}
   m_Mesh: {fileID: 4300000, guid: f40e5f85e5bdb7843b99189d9342040f, type: 3}
+--- !u!65 &65601442379928088
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917992007059394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.194871, y: 16.167995, z: 3.7903085}
+  m_Center: {x: 0, y: -0.000015735626, z: 0}
 --- !u!95 &95358465857731438
 Animator:
   serializedVersion: 3
@@ -100,3 +114,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114987995995700296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917992007059394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f0a6ffd5fabb248aa8af3e6cbdac9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  permObstacle: 1

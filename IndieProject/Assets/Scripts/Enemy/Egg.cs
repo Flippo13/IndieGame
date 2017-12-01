@@ -12,8 +12,8 @@ public class Egg : MonoBehaviour {
     [SerializeField]
     private GameObject enemy;
 
-    [SerializeField]
-    private float speed; 
+   // [SerializeField]
+   // private float speed; 
 
     private enum State {Obstacle, Falling};
     private State state; 
@@ -28,7 +28,7 @@ public class Egg : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody>();
 
-        player = GameObject.Find("Player 2.1");
+        player = GameObject.Find("Player 2.1 1");
         enemy = GameObject.Find("Enemy");
 
         state = State.Falling; 
@@ -36,7 +36,7 @@ public class Egg : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        Debug.DrawRay(transform.position, enemy.transform.position - this.transform.position, Color.red);
+        //Debug.DrawRay(transform.position, enemy.transform.position - this.transform.position, Color.red);
 
         CheckPlayerPosition();
 	} 

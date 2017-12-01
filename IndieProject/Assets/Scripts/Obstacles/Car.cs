@@ -10,7 +10,10 @@ public  class Car : Obstacles
     private Rigidbody rb;
 
     [SerializeField]
-    private float speed = 4; 
+    private float speed = 4;
+
+    [SerializeField]
+    private bool isObstacle; 
 
     private void Start()
     {
@@ -19,13 +22,14 @@ public  class Car : Obstacles
 
     private void Update()
     {
+        if(!isObstacle)
         transform.Translate(Vector3.left * speed * Time.deltaTime, Space.Self); 
     }
 
     protected override void OnHit(PlayerController_Felix player)
     {
-        Debug.Log("Player hit Obstacle"); 
-
+        player.ObstacleHit();
+        Destroy(this.gameObject); 
         //Call function within player to lower players speed and maker player blink and be invincible for a few seconds
     }
 }
