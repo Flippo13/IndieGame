@@ -219,6 +219,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="IndieProject.Plugins.csproj">
+      <Project>{ECFB7722-8CC9-A4B2-54B2-E4519CF1FC20}</Project>
+      <Name>IndieProject.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Economy\PeanutCollectable.cs" />
     <Compile Include="Assets\Scripts\Economy\PeanutPouch.cs" />
     <Compile Include="Assets\Scripts\Effects\Spin.cs" />
@@ -238,10 +244,12 @@
     <Compile Include="Assets\Scripts\Obstacles\Car.cs" />
     <Compile Include="Assets\Scripts\Obstacles\CarSpawner.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Obstacles.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\RoadObstacle.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\PhysPlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController_Felix.cs" />
+    <Compile Include="Assets\Scripts\Utilities\RayTools.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

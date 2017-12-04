@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/Scenes/Development/Alex_Scene.unity
-=======
-- path: Assets/Scenes/Danny_Scene.unity
->>>>>>> Danny_Branch
-=======
-- path: Assets/Scenes/FirstLevel.unity
->>>>>>> Yulislav_Branch
-=======
-- path: Assets/Scenes/Alex_Scene.unity
->>>>>>> Stashed changes
+- path: Assets/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1

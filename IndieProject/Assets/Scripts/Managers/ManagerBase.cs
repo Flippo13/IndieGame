@@ -6,12 +6,8 @@ public abstract class ManagerBase : MonoBehaviour
     [HideInInspector]
     public GameManager gameManager;
     
-
-    public virtual void SetUp()
+    public virtual void SetUp(GameManager pGameManager)
     {
-        gameManager = gameObject.GetComponent<GameManager>();
+        gameManager = pGameManager;
     }
-
-    public abstract void OnSceneEnter();
-    public abstract void OnSceneExit();
 }

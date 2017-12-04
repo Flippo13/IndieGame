@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace UnityStandardAssets.Vehicles.Ball
+{
     public class DimensionHole : MonoBehaviour
     {
-    
+
+        [SerializeField]
+        private Ball ball;
 
 
 
@@ -27,3 +31,4 @@ using UnityEngine;
             }
         }
     }
+}
