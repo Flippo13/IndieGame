@@ -6,15 +6,25 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
 
+    const byte BMAX = byte.MaxValue;
+
     public RectTransform mainMenu;
-    public RectTransform options;
-    public RectTransform highScore;
+    public RectTransform areYouSure;
     public RectTransform credits;
     public RectTransform loadScreen;
     public AudioClip buttonClick;
 
     private RectTransform current;
     
+    private void RestoreColor(Image i)
+    {
+        ChangeColor(i, BMAX, BMAX, BMAX, BMAX);
+    }
+    private void ChangeColor(Image i, byte r, byte g, byte b, byte a)
+    {
+        i.color = new Color32(r, g, b, a);
+    }
+
     private void Show(RectTransform t) { t.gameObject.SetActive(true); current = t; }
     private void Hide(RectTransform t) { t.gameObject.SetActive(false); }
     private void HideCurrent() { Hide(current); }
@@ -22,10 +32,9 @@ public class MenuManager : MonoBehaviour {
     private void Start()
     {
         Show(mainMenu);
-        Hide(options);
-        Hide(highScore);
         Hide(credits);
         Hide(loadScreen);
+        Hide(areYouSure);
     }
 
     public void PlayClick()
@@ -40,18 +49,15 @@ public class MenuManager : MonoBehaviour {
     }
     public void OnBack()
     {
+        RestoreColor(mainMenu.GetComponent<Image>());
         HideCurrent();
         Show(mainMenu);
     }
-    public void OnOptions()
+    public void OnAreYouSure(int brightness)
     {
-        HideCurrent();
-        Show(options);
-    }
-    public void OnHighscore()
-    {
-        HideCurrent();
-        Show(highScore);
+        byte b = (byte)Mathf.Clamp(brightness, 0, BMAX);
+        ChangeColor(mainMenu.GetComponent<Image>(), b, b, b, BMAX);
+        Show(areYouSure);
     }
     public void OnCredits()
     {

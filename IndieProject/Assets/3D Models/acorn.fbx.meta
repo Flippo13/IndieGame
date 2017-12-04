@@ -10,18 +10,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Acorn
-    4300002: Peanut
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Acorn_Material
     second: {fileID: 2100000, guid: d513d02f8b1e71443be716e2f3ea38dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Peanut_Material
-    second: {fileID: 2100000, guid: 18e3108f7bfc5d246b0c4f5a8c576b0d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
