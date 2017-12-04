@@ -59,9 +59,10 @@ public class MenuManager : MonoBehaviour {
         ChangeColor(mainMenu.GetComponent<Image>(), b, b, b, BMAX);
         Show(areYouSure);
     }
-    public void OnCredits()
+    public void OnCredits(int brightness)
     {
-        HideCurrent();
+        byte b = (byte)Mathf.Clamp(brightness, 0, BMAX);
+        ChangeColor(mainMenu.GetComponent<Image>(), b, b, b, BMAX);
         Show(credits);
     }
     public void OnExit()

@@ -7,6 +7,7 @@ public class PeanutCollectable : MonoBehaviour
     public NutType type;
     public AudioClip pickupSound;
     public int worth;
+    [HideInInspector]
     public Transform follow = null;
     private float attract = 0;
     

@@ -21,7 +21,6 @@ public class PeanutPouch : MonoBehaviour
         if(pc != null && pc.follow == null)
         {
             pc.OnCollect(this);
-            Destroy(pc.gameObject);
         }
     }
 
