@@ -6,17 +6,41 @@ public class PeanutPouch : MonoBehaviour
 {
     [HideInInspector]
     public int peanuts;
-    public Text indicator;
+    [HideInInspector]
+    public int acorns;
+    [HideInInspector]
+    public int seeds;
+
+    public Text peanutInd;
+    public Text acornsInd;
+    public Text seedsInd;
 
     private void OnTriggerEnter(Collider other)
     {
         PeanutCollectable pc = other.GetComponent<PeanutCollectable>();
-        if(pc != null && !pc.pickedUp)
+        if(pc != null && pc.follow == null)
         {
-            pc.pickedUp = true;
-            peanuts += pc.worth;
-            indicator.text = "Peanuts: " + peanuts;
+            pc.OnCollect(this);
             Destroy(pc.gameObject);
+        }
+    }
+
+    public void Add(NutType type, int amount)
+    {
+        switch (type)
+        {
+            case NutType.Acorn:
+                acorns += amount;
+                acornsInd.text = "Acorns: " + acorns;
+                break;
+            case NutType.Peanut:
+                peanuts += amount;
+                peanutInd.text = "Peanuts: " + peanuts;
+                break;
+            case NutType.Seed:
+                seeds += amount;
+                seedsInd.text = "Seeds: " + seeds;
+                break;
         }
     }
 }
