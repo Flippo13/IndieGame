@@ -10,6 +10,8 @@ public class WinLose : UIBase {
     
     public RectTransform winScreen;
     public RectTransform loseScreen;
+    public RectTransform areYouSureWin;
+    public RectTransform areYouSureLose;
 
     private void Start()
     {
@@ -44,6 +46,20 @@ public class WinLose : UIBase {
     {
         Show(loadingScreen);
         SceneManager.LoadScene(0);
+    }
+
+    public void OnAreYouSureWin(int brightness)
+    {
+        byte b = (byte)Mathf.Clamp(brightness, 0, BMAX);
+        ChangeColor(current.GetComponent<Image>(), b, b, b, BMAX);
+        Show(areYouSureWin);
+    }
+
+    public void OnAreYouSureLose(int brightness)
+    {
+        byte b = (byte)Mathf.Clamp(brightness, 0, BMAX);
+        ChangeColor(current.GetComponent<Image>(), b, b, b, BMAX);
+        Show(areYouSureLose);
     }
 
     void Update () {

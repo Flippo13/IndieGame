@@ -5,9 +5,8 @@ using System.Collections;
 public abstract class UIBase : MonoBehaviour
 {
     protected const byte BMAX = byte.MaxValue;
-
-    protected RectTransform previous;
-    protected RectTransform current;
+    
+    protected RectTransform current = null;
     public AudioClip buttonClick;
     public RectTransform areYouSure;
     public RectTransform loadingScreen;
@@ -18,6 +17,7 @@ public abstract class UIBase : MonoBehaviour
     }
     protected void ChangeColor(Image i, byte r, byte g, byte b, byte a)
     {
+        if (i == null) return;
         i.color = new Color32(r, g, b, a);
     }
     protected void Show(RectTransform t) { t.gameObject.SetActive(true); current = t; }
@@ -35,10 +35,10 @@ public abstract class UIBase : MonoBehaviour
         Show(areYouSure);
     }
 
-    public virtual void OnBack(RectTransform back)
+    public virtual void OnBack(RectTransform prev)
     {
-        RestoreColor(back.GetComponent<Image>());
+        RestoreColor(prev.GetComponent<Image>());
         HideCurrent();
-        Show(back);
+        Show(prev);
     }
 }
