@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 135595636593555376}
   - component: {fileID: 114689171997987804}
   m_Layer: 0
-  m_Name: Acorn
+  m_Name: acorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
