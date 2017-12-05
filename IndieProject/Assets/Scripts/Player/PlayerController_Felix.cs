@@ -12,7 +12,6 @@ public class PlayerController_Felix : MonoBehaviour
 
     public bool Enabled;
     public bool DebugMode;
-    public Text DebugTexts;
 
     public enum MovementState { Normal, WallRun, Tunnel }
     private MovementState state;
@@ -171,7 +170,7 @@ public class PlayerController_Felix : MonoBehaviour
             }
         }
 
-        DebugTexts.text = "";
+        //DebugTexts.text = "";
         if (Enabled)
         {
             AllignToGravity();
@@ -179,7 +178,7 @@ public class PlayerController_Felix : MonoBehaviour
         }
         if (DebugMode)
         {
-            DebugTexts.text += string.Format("\nPlayer Velocity: [{0}]\nSpeed: {1}m/s", rbody.velocity.ToString(), Mathf.Floor(globalSpeed));
+            //DebugTexts.text += string.Format("\nPlayer Velocity: [{0}]\nSpeed: {1}m/s", rbody.velocity.ToString(), Mathf.Floor(globalSpeed));
         }
     }
 
