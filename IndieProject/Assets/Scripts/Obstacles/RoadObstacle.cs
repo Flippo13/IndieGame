@@ -6,8 +6,6 @@ using UnityEngine;
 public class RoadObstacle : Obstacles
 {
 
-    public bool permObstacle; 
-
     // Use this for initialization
     void Start()
     {
@@ -24,7 +22,6 @@ public class RoadObstacle : Obstacles
     {
         //TODO: Call a function within player that slows the player down
         player.ObstacleHit();
-        if(!permObstacle)
         Destroy(gameObject); 
 
     }

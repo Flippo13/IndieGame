@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField]
-    private WinLoseScreen gameScreens;
+
     [SerializeField]
     private GameObject player;
     [SerializeField]
@@ -42,13 +41,9 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         distanceFromPlayer = transform.position - player.transform.position;
-        if(distanceFromPlayer.magnitude > 300f)
-        {
-            gameScreens.Lose(); 
-        }
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
-        if(distanceFromPlayer.magnitude < 200f) 
+        if(distanceFromPlayer.magnitude < 100f) 
         dropTime -= Time.deltaTime;
 
         if (dropTime <= 0)
@@ -56,7 +51,7 @@ public class EnemyController : MonoBehaviour
             ChooseDropPos(); 
             dropTime = setDropTime; 
         }
-       // Move();
+        Move();
     }
 
     private void Move()
@@ -83,10 +78,4 @@ public class EnemyController : MonoBehaviour
     }
 
    
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.tag == "Player")
-            gameScreens.Win(); 
-    }
-
 }

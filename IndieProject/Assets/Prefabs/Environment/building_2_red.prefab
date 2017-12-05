@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 33242095360998504}
   - component: {fileID: 23441878395934408}
   - component: {fileID: 95199122790356350}
-  - component: {fileID: 65270774402816288}
-  - component: {fileID: 114537666299287446}
+  - component: {fileID: 65511133125296404}
   m_Layer: 0
   m_Name: building_2_red
   m_TagString: Untagged
@@ -37,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562864476996128}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.79, y: 50.02, z: 452}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 136.48206, y: 75.81251, z: 132.50746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562864476996128}
   m_Mesh: {fileID: 4300000, guid: ce6497d85d8d13f49a7f43ed802b740e, type: 3}
---- !u!65 &65270774402816288
+--- !u!65 &65511133125296404
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5172706, y: 8.939908, z: 11.15}
+  m_Size: {x: 6.5172706, y: 8.939908, z: 6.935783}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95199122790356350
 Animator:
@@ -115,15 +114,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114537666299287446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562864476996128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f0a6ffd5fabb248aa8af3e6cbdac9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  permObstacle: 1

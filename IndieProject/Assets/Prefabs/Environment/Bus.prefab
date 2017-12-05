@@ -56,9 +56,6 @@ GameObject:
   - component: {fileID: 33355697056925418}
   - component: {fileID: 23465740930297750}
   - component: {fileID: 95033168933442176}
-  - component: {fileID: 114502507118403108}
-  - component: {fileID: 65986451635596188}
-  - component: {fileID: 65864413367404566}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -146,8 +143,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344869061533884}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.229538, y: 50, z: 495.91077}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalPosition: {x: -213.38, y: 287.84, z: 202.23}
+  m_LocalScale: {x: 0.0042562657, y: 0.0042562657, z: 0.0042562657}
   m_Children:
   - {fileID: 4223223485415592}
   - {fileID: 4893162814243716}
@@ -155,7 +152,7 @@ Transform:
   - {fileID: 4297796568450060}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 8.483001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4893162814243716
 Transform:
   m_ObjectHideFlags: 1
@@ -374,30 +371,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1346294357019102}
   m_Mesh: {fileID: 4300004, guid: 18dc978b9bba9c34699f191a0968b16b, type: 3}
---- !u!65 &65864413367404566
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344869061533884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 583.99, y: 611.26086, z: 2107.3276}
-  m_Center: {x: 0, y: 48.46376, z: -6.4489136}
---- !u!65 &65986451635596188
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344869061533884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 583.99, y: 821.3, z: 2107.3276}
-  m_Center: {x: 0, y: 48.46376, z: -6.4489136}
 --- !u!95 &95033168933442176
 Animator:
   serializedVersion: 3
@@ -415,15 +388,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114502507118403108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344869061533884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f0a6ffd5fabb248aa8af3e6cbdac9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  permObstacle: 1

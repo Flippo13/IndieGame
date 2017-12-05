@@ -28,9 +28,9 @@ public class CarSpawner : MonoBehaviour {
         numOfTry = Try.First;
 
         if (spawnDirection == SpawnDirection.Right)
-            carDirection = -90;
+            carDirection = 0;
         else if (spawnDirection == SpawnDirection.Left)
-            carDirection = 90; 
+            carDirection = 180; 
 
         StartCoroutine("Spawning",spawnSpeed);
 	}

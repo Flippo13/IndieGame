@@ -210,7 +210,7 @@ public class PlayerController_Felix : MonoBehaviour
             case MovementState.WallRun: WallMovement(wallNormal, side); break;
             case MovementState.Tunnel: TunnelMovement(); break;
         }
-        //print(transform.forward);
+        print(transform.forward);
         //rbody.AddForce(transform.forward * runSpeed, ForceMode.Acceleration);
     }
 

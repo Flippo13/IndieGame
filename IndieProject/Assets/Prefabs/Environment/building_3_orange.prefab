@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 33297063972622918}
   - component: {fileID: 23580377724663610}
   - component: {fileID: 95874155954467810}
-  - component: {fileID: 65372469870731032}
-  - component: {fileID: 114816077215282996}
+  - component: {fileID: 65112842058907634}
   m_Layer: 0
   m_Name: building_3_orange
   m_TagString: Untagged
@@ -37,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094976871868478}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1216.795, y: 7.66, z: 654.8225}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 139.75507, y: 80.153145, z: 140.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094976871868478}
   m_Mesh: {fileID: 4300000, guid: f40e5f85e5bdb7843b99189d9342040f, type: 3}
---- !u!65 &65372469870731032
+--- !u!65 &65112842058907634
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,15 +113,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114816077215282996
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1094976871868478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f0a6ffd5fabb248aa8af3e6cbdac9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  permObstacle: 1

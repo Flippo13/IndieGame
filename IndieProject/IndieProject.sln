@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.CSharp", "Indi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.CSharp.Plugins", "IndieProject.CSharp.Plugins.csproj", "{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.CSharp.Editor", "IndieProject.CSharp.Editor.csproj", "{75BE220F-7DD5-D762-8334-FE91B5FE0FF3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.CSharp.Editor.Plugins", "IndieProject.CSharp.Editor.Plugins.csproj", "{7A282A59-0467-BB04-A752-F9BCBA6C9275}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB88459C-D720-5E7D-AF1A-2A6D87EBEF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BE220F-7DD5-D762-8334-FE91B5FE0FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BE220F-7DD5-D762-8334-FE91B5FE0FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BE220F-7DD5-D762-8334-FE91B5FE0FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BE220F-7DD5-D762-8334-FE91B5FE0FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A282A59-0467-BB04-A752-F9BCBA6C9275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A282A59-0467-BB04-A752-F9BCBA6C9275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A282A59-0467-BB04-A752-F9BCBA6C9275}.Release|Any CPU.ActiveCfg = Release|Any CPU
