@@ -54,7 +54,7 @@ public class ObstacleGenerator : MonoBehaviour {
             for (int b = 0; b < lanes; b++)
             {
                 if (emptySpots[a * lanes + b]) continue;
-                switch(Lotto())
+              //  switch(Lotto())
             }
         }
     }

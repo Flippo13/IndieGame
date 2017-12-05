@@ -42,9 +42,9 @@ public class EnemyMovementOnRail : MonoBehaviour {
         distanceFromPlayer = transform.position - player.transform.position;
 
 
-        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && speed > 25)
+        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && speed > 5)
             speed--;
-        else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer && speed < 45)
+        else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer && speed < 10)
             speed++; 
 
     }
