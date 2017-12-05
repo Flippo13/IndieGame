@@ -7,13 +7,21 @@ public class ObstacleGenerator : MonoBehaviour {
     public float laneWidth;
     public uint lanes;
     public uint length;
+    public uint size { get { return lanes * length; } }
 
     const float HALF = 0.5f;
 
+    [Range(0, 5)] public float emptySpaces;
     [Range(0, 1)] public float obstacles;
     [Range(0, 1)] public float acorns;
     [Range(0, 1)] public float peanuts;
     [Range(0, 1)] public float seeds;
+
+    private GameObject parentObj;
+    public GameObject[] Obstacles;
+    public PeanutCollectable Acorn;
+    public PeanutCollectable Peanut;
+    public PeanutCollectable Seed;
 
     private GameObject[] areas;
 
@@ -36,11 +44,14 @@ public class ObstacleGenerator : MonoBehaviour {
             b.isTrigger = true;
             areas[a].transform.localPosition = new Vector3(HALF - ((a + HALF) / areas.Length), 0, HALF);
         }
-        transform.localScale = new Vector3(lanes * laneWidth, 1, length);
+        transform.localScale = new Vector3(lanes * laneWidth, -1, length);
     }
     
     void GenerateObstacles()
     {
+        parentObj = new GameObject("Obstacle Container");
+        parentObj.transform.position = transform.position + (Vector3.left * laneWidth * HALF);
+
         emptySpots = new bool[lanes * length];
         for (int a = 0; a < length; a++)
         {
@@ -54,7 +65,22 @@ public class ObstacleGenerator : MonoBehaviour {
             for (int b = 0; b < lanes; b++)
             {
                 if (emptySpots[a * lanes + b]) continue;
-                switch(Lotto())
+                GameObject obj = null;
+                int lotto = Lotto(emptySpaces, obstacles, acorns, peanuts, seeds);
+                Debug.Log(lotto);
+                switch (lotto)
+                {
+                    case 4: obj = Instantiate(Seed, parentObj.transform).gameObject; break;
+                    case 3: obj = Instantiate(Peanut, parentObj.transform).gameObject; break;
+                    case 2: obj = Instantiate(Acorn, parentObj.transform).gameObject; break;
+                    case 1: obj = Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], parentObj.transform); break;
+                    default: Debug.LogFormat("Error!"); break;
+                }
+                if(obj != null)
+                {
+                    obj.transform.localPosition = new Vector3(b * laneWidth, 1, a);
+                }
+                emptySpots[a * lanes + b] = true;
             }
         }
     }
@@ -64,12 +90,12 @@ public class ObstacleGenerator : MonoBehaviour {
 
     }
     
-    public int Lotto(float sum, params float[] nums)
+    public int Lotto(params float[] nums)
     {
-        float checkSum = 0;
-        foreach(float f in nums) checkSum += f;
-        if (checkSum > sum) return -1;
-
+        if (nums.Length == 0) return -1;
+        float sum = 0;
+        foreach(float f in nums) sum += f;
+        
         float result = Random.Range(0, sum);
         for(int a = 0; a < nums.Length; a++)
         {

@@ -4694,7 +4694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 422465060}
   - component: {fileID: 422465059}
-  - component: {fileID: 422465058}
   m_Layer: 0
   m_Name: Peanuts
   m_TagString: Untagged
@@ -4702,20 +4701,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &422465058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114726293144502814, guid: 02bd21834d63de5468aac7ade6a2cca8,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 422465056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d059c31eac5d64c8b4c74391da5d16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  worth: 1
-  pickedUp: 0
 --- !u!135 &422465059
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5407,12 +5392,12 @@ Prefab:
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 391
+      value: 408
       objectReference: {fileID: 0}
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 155
+      value: 163
       objectReference: {fileID: 0}
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}
@@ -5888,6 +5873,11 @@ Prefab:
     - target: {fileID: 4829928110654416, guid: 61f6142a8ebba924f8ce51f3dd9e8f2a, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.0044022617
+      objectReference: {fileID: 0}
+    - target: {fileID: 95033168933442176, guid: 61f6142a8ebba924f8ce51f3dd9e8f2a,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61f6142a8ebba924f8ce51f3dd9e8f2a, type: 2}
@@ -22490,6 +22480,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859341949476010, guid: 1c1a9377882b85548bc194ebe6fe55f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.029115848
@@ -22564,6 +22559,36 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].name
+      value: Speed Boost
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].cost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].nut
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].key
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].multiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643132391400696, guid: 1c1a9377882b85548bc194ebe6fe55f4,
+        type: 2}
+      propertyPath: powerups.Array.data[0].duration
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114649923062590894, guid: 1c1a9377882b85548bc194ebe6fe55f4, type: 2}
