@@ -1,0 +1,660 @@
+fileFormatVersion: 2
+guid: 0d6ccd7417105ce4ea66076861ea4f84
+timeCreated: 1511779602
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Building_10
+    100002: Building_11
+    100004: Building_12
+    100006: Building_13
+    100008: Building_14
+    100010: Building_15
+    100012: Building_16
+    100014: Building_17
+    100016: Building_18
+    100018: Building_19
+    100020: Building_20
+    100022: Building_21
+    100024: Building_22
+    100026: Building_23
+    100028: Building_24
+    100030: Building_25
+    100032: polySurface1
+    100034: polySurface1 1
+    100036: polySurface1 10
+    100038: polySurface1 11
+    100040: polySurface1 12
+    100042: polySurface1 13
+    100044: polySurface1 14
+    100046: polySurface1 15
+    100048: polySurface1 2
+    100050: polySurface1 3
+    100052: polySurface1 4
+    100054: polySurface1 5
+    100056: polySurface1 6
+    100058: polySurface1 7
+    100060: polySurface1 8
+    100062: polySurface1 9
+    100064: polySurface2
+    100066: polySurface2 1
+    100068: polySurface2 10
+    100070: polySurface2 11
+    100072: polySurface2 12
+    100074: polySurface2 13
+    100076: polySurface2 14
+    100078: polySurface2 15
+    100080: polySurface2 2
+    100082: polySurface2 3
+    100084: polySurface2 4
+    100086: polySurface2 5
+    100088: polySurface2 6
+    100090: polySurface2 7
+    100092: polySurface2 8
+    100094: polySurface2 9
+    100096: //RootNode
+    100098: Street_Lamp_Body_01
+    100100: Street_Lamp_Body_01 1
+    100102: Street_Lamp_Body_01 2
+    100104: Street_Lamp_Body_01 3
+    100106: Street_Lamp_Body_010
+    100108: Street_Lamp_Body_010 1
+    100110: Street_Lamp_Body_010 2
+    100112: Street_Lamp_Body_010 3
+    100114: Street_Lamp_Body_011
+    100116: Street_Lamp_Body_011 1
+    100118: Street_Lamp_Body_011 2
+    100120: Street_Lamp_Body_011 3
+    100122: Street_Lamp_Body_012
+    100124: Street_Lamp_Body_012 1
+    100126: Street_Lamp_Body_012 2
+    100128: Street_Lamp_Body_012 3
+    100130: Street_Lamp_Body_013
+    100132: Street_Lamp_Body_014
+    100134: Street_Lamp_Body_015
+    100136: Street_Lamp_Body_016
+    100138: Street_Lamp_Body_04
+    100140: Street_Lamp_Body_04 1
+    100142: Street_Lamp_Body_04 2
+    100144: Street_Lamp_Body_04 3
+    100146: Street_Lamp_Body_05
+    100148: Street_Lamp_Body_05 1
+    100150: Street_Lamp_Body_05 2
+    100152: Street_Lamp_Body_05 3
+    100154: Street_Lamp_Body_09
+    100156: Street_Lamp_Body_09 1
+    100158: Street_Lamp_Body_09 2
+    100160: Street_Lamp_Body_09 3
+    100162: Street_Lamp_Bulb_01
+    100164: Street_Lamp_Bulb_01 1
+    100166: Street_Lamp_Bulb_01 10
+    100168: Street_Lamp_Bulb_01 11
+    100170: Street_Lamp_Bulb_01 12
+    100172: Street_Lamp_Bulb_01 13
+    100174: Street_Lamp_Bulb_01 14
+    100176: Street_Lamp_Bulb_01 15
+    100178: Street_Lamp_Bulb_01 16
+    100180: Street_Lamp_Bulb_01 17
+    100182: Street_Lamp_Bulb_01 18
+    100184: Street_Lamp_Bulb_01 19
+    100186: Street_Lamp_Bulb_01 2
+    100188: Street_Lamp_Bulb_01 20
+    100190: Street_Lamp_Bulb_01 21
+    100192: Street_Lamp_Bulb_01 22
+    100194: Street_Lamp_Bulb_01 23
+    100196: Street_Lamp_Bulb_01 24
+    100198: Street_Lamp_Bulb_01 25
+    100200: Street_Lamp_Bulb_01 26
+    100202: Street_Lamp_Bulb_01 27
+    100204: Street_Lamp_Bulb_01 28
+    100206: Street_Lamp_Bulb_01 29
+    100208: Street_Lamp_Bulb_01 3
+    100210: Street_Lamp_Bulb_01 30
+    100212: Street_Lamp_Bulb_01 31
+    100214: Street_Lamp_Bulb_01 4
+    100216: Street_Lamp_Bulb_01 5
+    100218: Street_Lamp_Bulb_01 6
+    100220: Street_Lamp_Bulb_01 7
+    100222: Street_Lamp_Bulb_01 8
+    100224: Street_Lamp_Bulb_01 9
+    100226: transform1
+    100228: transform1 1
+    100230: transform1 10
+    100232: transform1 11
+    100234: transform1 12
+    100236: transform1 13
+    100238: transform1 14
+    100240: transform1 15
+    100242: transform1 2
+    100244: transform1 3
+    100246: transform1 4
+    100248: transform1 5
+    100250: transform1 6
+    100252: transform1 7
+    100254: transform1 8
+    100256: transform1 9
+    400000: Building_10
+    400002: Building_11
+    400004: Building_12
+    400006: Building_13
+    400008: Building_14
+    400010: Building_15
+    400012: Building_16
+    400014: Building_17
+    400016: Building_18
+    400018: Building_19
+    400020: Building_20
+    400022: Building_21
+    400024: Building_22
+    400026: Building_23
+    400028: Building_24
+    400030: Building_25
+    400032: polySurface1
+    400034: polySurface1 1
+    400036: polySurface1 10
+    400038: polySurface1 11
+    400040: polySurface1 12
+    400042: polySurface1 13
+    400044: polySurface1 14
+    400046: polySurface1 15
+    400048: polySurface1 2
+    400050: polySurface1 3
+    400052: polySurface1 4
+    400054: polySurface1 5
+    400056: polySurface1 6
+    400058: polySurface1 7
+    400060: polySurface1 8
+    400062: polySurface1 9
+    400064: polySurface2
+    400066: polySurface2 1
+    400068: polySurface2 10
+    400070: polySurface2 11
+    400072: polySurface2 12
+    400074: polySurface2 13
+    400076: polySurface2 14
+    400078: polySurface2 15
+    400080: polySurface2 2
+    400082: polySurface2 3
+    400084: polySurface2 4
+    400086: polySurface2 5
+    400088: polySurface2 6
+    400090: polySurface2 7
+    400092: polySurface2 8
+    400094: polySurface2 9
+    400096: //RootNode
+    400098: Street_Lamp_Body_01
+    400100: Street_Lamp_Body_01 1
+    400102: Street_Lamp_Body_01 2
+    400104: Street_Lamp_Body_01 3
+    400106: Street_Lamp_Body_010
+    400108: Street_Lamp_Body_010 1
+    400110: Street_Lamp_Body_010 2
+    400112: Street_Lamp_Body_010 3
+    400114: Street_Lamp_Body_011
+    400116: Street_Lamp_Body_011 1
+    400118: Street_Lamp_Body_011 2
+    400120: Street_Lamp_Body_011 3
+    400122: Street_Lamp_Body_012
+    400124: Street_Lamp_Body_012 1
+    400126: Street_Lamp_Body_012 2
+    400128: Street_Lamp_Body_012 3
+    400130: Street_Lamp_Body_013
+    400132: Street_Lamp_Body_014
+    400134: Street_Lamp_Body_015
+    400136: Street_Lamp_Body_016
+    400138: Street_Lamp_Body_04
+    400140: Street_Lamp_Body_04 1
+    400142: Street_Lamp_Body_04 2
+    400144: Street_Lamp_Body_04 3
+    400146: Street_Lamp_Body_05
+    400148: Street_Lamp_Body_05 1
+    400150: Street_Lamp_Body_05 2
+    400152: Street_Lamp_Body_05 3
+    400154: Street_Lamp_Body_09
+    400156: Street_Lamp_Body_09 1
+    400158: Street_Lamp_Body_09 2
+    400160: Street_Lamp_Body_09 3
+    400162: Street_Lamp_Bulb_01
+    400164: Street_Lamp_Bulb_01 1
+    400166: Street_Lamp_Bulb_01 10
+    400168: Street_Lamp_Bulb_01 11
+    400170: Street_Lamp_Bulb_01 12
+    400172: Street_Lamp_Bulb_01 13
+    400174: Street_Lamp_Bulb_01 14
+    400176: Street_Lamp_Bulb_01 15
+    400178: Street_Lamp_Bulb_01 16
+    400180: Street_Lamp_Bulb_01 17
+    400182: Street_Lamp_Bulb_01 18
+    400184: Street_Lamp_Bulb_01 19
+    400186: Street_Lamp_Bulb_01 2
+    400188: Street_Lamp_Bulb_01 20
+    400190: Street_Lamp_Bulb_01 21
+    400192: Street_Lamp_Bulb_01 22
+    400194: Street_Lamp_Bulb_01 23
+    400196: Street_Lamp_Bulb_01 24
+    400198: Street_Lamp_Bulb_01 25
+    400200: Street_Lamp_Bulb_01 26
+    400202: Street_Lamp_Bulb_01 27
+    400204: Street_Lamp_Bulb_01 28
+    400206: Street_Lamp_Bulb_01 29
+    400208: Street_Lamp_Bulb_01 3
+    400210: Street_Lamp_Bulb_01 30
+    400212: Street_Lamp_Bulb_01 31
+    400214: Street_Lamp_Bulb_01 4
+    400216: Street_Lamp_Bulb_01 5
+    400218: Street_Lamp_Bulb_01 6
+    400220: Street_Lamp_Bulb_01 7
+    400222: Street_Lamp_Bulb_01 8
+    400224: Street_Lamp_Bulb_01 9
+    400226: transform1
+    400228: transform1 1
+    400230: transform1 10
+    400232: transform1 11
+    400234: transform1 12
+    400236: transform1 13
+    400238: transform1 14
+    400240: transform1 15
+    400242: transform1 2
+    400244: transform1 3
+    400246: transform1 4
+    400248: transform1 5
+    400250: transform1 6
+    400252: transform1 7
+    400254: transform1 8
+    400256: transform1 9
+    2300000: polySurface1
+    2300002: polySurface1 1
+    2300004: polySurface1 10
+    2300006: polySurface1 11
+    2300008: polySurface1 12
+    2300010: polySurface1 13
+    2300012: polySurface1 14
+    2300014: polySurface1 15
+    2300016: polySurface1 2
+    2300018: polySurface1 3
+    2300020: polySurface1 4
+    2300022: polySurface1 5
+    2300024: polySurface1 6
+    2300026: polySurface1 7
+    2300028: polySurface1 8
+    2300030: polySurface1 9
+    2300032: polySurface2
+    2300034: polySurface2 1
+    2300036: polySurface2 10
+    2300038: polySurface2 11
+    2300040: polySurface2 12
+    2300042: polySurface2 13
+    2300044: polySurface2 14
+    2300046: polySurface2 15
+    2300048: polySurface2 2
+    2300050: polySurface2 3
+    2300052: polySurface2 4
+    2300054: polySurface2 5
+    2300056: polySurface2 6
+    2300058: polySurface2 7
+    2300060: polySurface2 8
+    2300062: polySurface2 9
+    2300064: //RootNode
+    2300066: Street_Lamp_Body_01
+    2300068: Street_Lamp_Body_01 1
+    2300070: Street_Lamp_Body_01 2
+    2300072: Street_Lamp_Body_01 3
+    2300074: Street_Lamp_Body_010
+    2300076: Street_Lamp_Body_010 1
+    2300078: Street_Lamp_Body_010 2
+    2300080: Street_Lamp_Body_010 3
+    2300082: Street_Lamp_Body_011
+    2300084: Street_Lamp_Body_011 1
+    2300086: Street_Lamp_Body_011 2
+    2300088: Street_Lamp_Body_011 3
+    2300090: Street_Lamp_Body_012
+    2300092: Street_Lamp_Body_012 1
+    2300094: Street_Lamp_Body_012 2
+    2300096: Street_Lamp_Body_012 3
+    2300098: Street_Lamp_Body_013
+    2300100: Street_Lamp_Body_014
+    2300102: Street_Lamp_Body_015
+    2300104: Street_Lamp_Body_016
+    2300106: Street_Lamp_Body_04
+    2300108: Street_Lamp_Body_04 1
+    2300110: Street_Lamp_Body_04 2
+    2300112: Street_Lamp_Body_04 3
+    2300114: Street_Lamp_Body_05
+    2300116: Street_Lamp_Body_05 1
+    2300118: Street_Lamp_Body_05 2
+    2300120: Street_Lamp_Body_05 3
+    2300122: Street_Lamp_Body_09
+    2300124: Street_Lamp_Body_09 1
+    2300126: Street_Lamp_Body_09 2
+    2300128: Street_Lamp_Body_09 3
+    2300130: Street_Lamp_Bulb_01
+    2300132: Street_Lamp_Bulb_01 1
+    2300134: Street_Lamp_Bulb_01 10
+    2300136: Street_Lamp_Bulb_01 11
+    2300138: Street_Lamp_Bulb_01 12
+    2300140: Street_Lamp_Bulb_01 13
+    2300142: Street_Lamp_Bulb_01 14
+    2300144: Street_Lamp_Bulb_01 15
+    2300146: Street_Lamp_Bulb_01 16
+    2300148: Street_Lamp_Bulb_01 17
+    2300150: Street_Lamp_Bulb_01 18
+    2300152: Street_Lamp_Bulb_01 19
+    2300154: Street_Lamp_Bulb_01 2
+    2300156: Street_Lamp_Bulb_01 20
+    2300158: Street_Lamp_Bulb_01 21
+    2300160: Street_Lamp_Bulb_01 22
+    2300162: Street_Lamp_Bulb_01 23
+    2300164: Street_Lamp_Bulb_01 24
+    2300166: Street_Lamp_Bulb_01 25
+    2300168: Street_Lamp_Bulb_01 26
+    2300170: Street_Lamp_Bulb_01 27
+    2300172: Street_Lamp_Bulb_01 28
+    2300174: Street_Lamp_Bulb_01 29
+    2300176: Street_Lamp_Bulb_01 3
+    2300178: Street_Lamp_Bulb_01 30
+    2300180: Street_Lamp_Bulb_01 31
+    2300182: Street_Lamp_Bulb_01 4
+    2300184: Street_Lamp_Bulb_01 5
+    2300186: Street_Lamp_Bulb_01 6
+    2300188: Street_Lamp_Bulb_01 7
+    2300190: Street_Lamp_Bulb_01 8
+    2300192: Street_Lamp_Bulb_01 9
+    3300000: polySurface1
+    3300002: polySurface1 1
+    3300004: polySurface1 10
+    3300006: polySurface1 11
+    3300008: polySurface1 12
+    3300010: polySurface1 13
+    3300012: polySurface1 14
+    3300014: polySurface1 15
+    3300016: polySurface1 2
+    3300018: polySurface1 3
+    3300020: polySurface1 4
+    3300022: polySurface1 5
+    3300024: polySurface1 6
+    3300026: polySurface1 7
+    3300028: polySurface1 8
+    3300030: polySurface1 9
+    3300032: polySurface2
+    3300034: polySurface2 1
+    3300036: polySurface2 10
+    3300038: polySurface2 11
+    3300040: polySurface2 12
+    3300042: polySurface2 13
+    3300044: polySurface2 14
+    3300046: polySurface2 15
+    3300048: polySurface2 2
+    3300050: polySurface2 3
+    3300052: polySurface2 4
+    3300054: polySurface2 5
+    3300056: polySurface2 6
+    3300058: polySurface2 7
+    3300060: polySurface2 8
+    3300062: polySurface2 9
+    3300064: //RootNode
+    3300066: Street_Lamp_Body_01
+    3300068: Street_Lamp_Body_01 1
+    3300070: Street_Lamp_Body_01 2
+    3300072: Street_Lamp_Body_01 3
+    3300074: Street_Lamp_Body_010
+    3300076: Street_Lamp_Body_010 1
+    3300078: Street_Lamp_Body_010 2
+    3300080: Street_Lamp_Body_010 3
+    3300082: Street_Lamp_Body_011
+    3300084: Street_Lamp_Body_011 1
+    3300086: Street_Lamp_Body_011 2
+    3300088: Street_Lamp_Body_011 3
+    3300090: Street_Lamp_Body_012
+    3300092: Street_Lamp_Body_012 1
+    3300094: Street_Lamp_Body_012 2
+    3300096: Street_Lamp_Body_012 3
+    3300098: Street_Lamp_Body_013
+    3300100: Street_Lamp_Body_014
+    3300102: Street_Lamp_Body_015
+    3300104: Street_Lamp_Body_016
+    3300106: Street_Lamp_Body_04
+    3300108: Street_Lamp_Body_04 1
+    3300110: Street_Lamp_Body_04 2
+    3300112: Street_Lamp_Body_04 3
+    3300114: Street_Lamp_Body_05
+    3300116: Street_Lamp_Body_05 1
+    3300118: Street_Lamp_Body_05 2
+    3300120: Street_Lamp_Body_05 3
+    3300122: Street_Lamp_Body_09
+    3300124: Street_Lamp_Body_09 1
+    3300126: Street_Lamp_Body_09 2
+    3300128: Street_Lamp_Body_09 3
+    3300130: Street_Lamp_Bulb_01
+    3300132: Street_Lamp_Bulb_01 1
+    3300134: Street_Lamp_Bulb_01 10
+    3300136: Street_Lamp_Bulb_01 11
+    3300138: Street_Lamp_Bulb_01 12
+    3300140: Street_Lamp_Bulb_01 13
+    3300142: Street_Lamp_Bulb_01 14
+    3300144: Street_Lamp_Bulb_01 15
+    3300146: Street_Lamp_Bulb_01 16
+    3300148: Street_Lamp_Bulb_01 17
+    3300150: Street_Lamp_Bulb_01 18
+    3300152: Street_Lamp_Bulb_01 19
+    3300154: Street_Lamp_Bulb_01 2
+    3300156: Street_Lamp_Bulb_01 20
+    3300158: Street_Lamp_Bulb_01 21
+    3300160: Street_Lamp_Bulb_01 22
+    3300162: Street_Lamp_Bulb_01 23
+    3300164: Street_Lamp_Bulb_01 24
+    3300166: Street_Lamp_Bulb_01 25
+    3300168: Street_Lamp_Bulb_01 26
+    3300170: Street_Lamp_Bulb_01 27
+    3300172: Street_Lamp_Bulb_01 28
+    3300174: Street_Lamp_Bulb_01 29
+    3300176: Street_Lamp_Bulb_01 3
+    3300178: Street_Lamp_Bulb_01 30
+    3300180: Street_Lamp_Bulb_01 31
+    3300182: Street_Lamp_Bulb_01 4
+    3300184: Street_Lamp_Bulb_01 5
+    3300186: Street_Lamp_Bulb_01 6
+    3300188: Street_Lamp_Bulb_01 7
+    3300190: Street_Lamp_Bulb_01 8
+    3300192: Street_Lamp_Bulb_01 9
+    4300000: TurnRoad
+    4300002: polySurface1
+    4300004: polySurface2
+    4300006: polySurface1
+    4300008: polySurface2
+    4300010: polySurface1
+    4300012: polySurface2
+    4300014: polySurface1
+    4300016: polySurface2
+    4300018: polySurface1
+    4300020: polySurface2
+    4300022: polySurface1
+    4300024: polySurface2
+    4300026: polySurface1
+    4300028: polySurface2
+    4300030: polySurface1
+    4300032: polySurface2
+    4300034: polySurface1
+    4300036: polySurface2
+    4300038: polySurface1
+    4300040: polySurface2
+    4300042: polySurface1
+    4300044: polySurface2
+    4300046: polySurface1
+    4300048: polySurface2
+    4300050: polySurface1
+    4300052: polySurface2
+    4300054: polySurface1
+    4300056: polySurface2
+    4300058: polySurface1
+    4300060: polySurface2
+    4300062: polySurface1
+    4300064: polySurface2
+    4300066: Street_Lamp_Body_013
+    4300068: Street_Lamp_Bulb_01
+    4300070: Street_Lamp_Body_05
+    4300072: Street_Lamp_Bulb_01
+    4300074: Street_Lamp_Body_09
+    4300076: Street_Lamp_Bulb_01
+    4300078: Street_Lamp_Body_010
+    4300080: Street_Lamp_Bulb_01
+    4300082: Street_Lamp_Body_04
+    4300084: Street_Lamp_Bulb_01
+    4300086: Street_Lamp_Body_01
+    4300088: Street_Lamp_Bulb_01
+    4300090: Street_Lamp_Body_011
+    4300092: Street_Lamp_Bulb_01
+    4300094: Street_Lamp_Body_012
+    4300096: Street_Lamp_Bulb_01
+    4300098: Street_Lamp_Body_014
+    4300100: Street_Lamp_Bulb_01
+    4300102: Street_Lamp_Body_05
+    4300104: Street_Lamp_Bulb_01
+    4300106: Street_Lamp_Body_09
+    4300108: Street_Lamp_Bulb_01
+    4300110: Street_Lamp_Body_010
+    4300112: Street_Lamp_Bulb_01
+    4300114: Street_Lamp_Body_04
+    4300116: Street_Lamp_Bulb_01
+    4300118: Street_Lamp_Body_01
+    4300120: Street_Lamp_Bulb_01
+    4300122: Street_Lamp_Body_011
+    4300124: Street_Lamp_Bulb_01
+    4300126: Street_Lamp_Body_012
+    4300128: Street_Lamp_Bulb_01
+    4300130: Street_Lamp_Body_016
+    4300132: Street_Lamp_Bulb_01
+    4300134: Street_Lamp_Body_05
+    4300136: Street_Lamp_Bulb_01
+    4300138: Street_Lamp_Body_09
+    4300140: Street_Lamp_Bulb_01
+    4300142: Street_Lamp_Body_010
+    4300144: Street_Lamp_Bulb_01
+    4300146: Street_Lamp_Body_04
+    4300148: Street_Lamp_Bulb_01
+    4300150: Street_Lamp_Body_01
+    4300152: Street_Lamp_Bulb_01
+    4300154: Street_Lamp_Body_011
+    4300156: Street_Lamp_Bulb_01
+    4300158: Street_Lamp_Body_012
+    4300160: Street_Lamp_Bulb_01
+    4300162: Street_Lamp_Body_015
+    4300164: Street_Lamp_Bulb_01
+    4300166: Street_Lamp_Body_05
+    4300168: Street_Lamp_Bulb_01
+    4300170: Street_Lamp_Body_09
+    4300172: Street_Lamp_Bulb_01
+    4300174: Street_Lamp_Body_010
+    4300176: Street_Lamp_Bulb_01
+    4300178: Street_Lamp_Body_04
+    4300180: Street_Lamp_Bulb_01
+    4300182: Street_Lamp_Body_01
+    4300184: Street_Lamp_Bulb_01
+    4300186: Street_Lamp_Body_011
+    4300188: Street_Lamp_Bulb_01
+    4300190: Street_Lamp_Body_012
+    4300192: Street_Lamp_Bulb_01
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Lamp_Body_MAT1
+    second: {fileID: 2100000, guid: 4c7f30d87b7e78a4a966918b2a51e0f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Lamp_Bulb_MAT1
+    second: {fileID: 2100000, guid: e49f5d0a0f0626d4394c29c8d51e1575, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White1
+    second: {fileID: 2100000, guid: 8a64c9d4dd7280744a6b7f3c4ffb4e89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultPolygonShader1
+    second: {fileID: 2100000, guid: e92ebac6b91894e46b4db48251a0979d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong2
+    second: {fileID: 2100000, guid: 615f7f83782efea439ec659b54060978, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

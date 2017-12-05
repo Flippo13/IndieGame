@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 067fd236bad99cf4283635ed560ef2f9
+timeCreated: 1511779601
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Building_1
+    100002: Building_2
+    100004: Building_3
+    100006: Building_4
+    100008: polySurface1
+    100010: polySurface1 1
+    100012: polySurface1 2
+    100014: polySurface1 3
+    100016: polySurface2
+    100018: polySurface2 1
+    100020: polySurface2 2
+    100022: polySurface2 3
+    100024: //RootNode
+    100026: Street_Lamp_Body_01
+    100028: Street_Lamp_Body_02
+    100030: Street_Lamp_Body_03
+    100032: Street_Lamp_Body_04
+    100034: Street_Lamp_Body_05
+    100036: Street_Lamp_Body_06
+    100038: Street_Lamp_Body_07
+    100040: Street_Lamp_Body_08
+    100042: Street_Lamp_Bulb_01
+    100044: Street_Lamp_Bulb_01 1
+    100046: Street_Lamp_Bulb_01 2
+    100048: Street_Lamp_Bulb_01 3
+    100050: Street_Lamp_Bulb_01 4
+    100052: Street_Lamp_Bulb_01 5
+    100054: Street_Lamp_Bulb_01 6
+    100056: Street_Lamp_Bulb_01 7
+    100058: transform1
+    100060: transform1 1
+    100062: transform1 2
+    100064: transform1 3
+    400000: Building_1
+    400002: Building_2
+    400004: Building_3
+    400006: Building_4
+    400008: polySurface1
+    400010: polySurface1 1
+    400012: polySurface1 2
+    400014: polySurface1 3
+    400016: polySurface2
+    400018: polySurface2 1
+    400020: polySurface2 2
+    400022: polySurface2 3
+    400024: //RootNode
+    400026: Street_Lamp_Body_01
+    400028: Street_Lamp_Body_02
+    400030: Street_Lamp_Body_03
+    400032: Street_Lamp_Body_04
+    400034: Street_Lamp_Body_05
+    400036: Street_Lamp_Body_06
+    400038: Street_Lamp_Body_07
+    400040: Street_Lamp_Body_08
+    400042: Street_Lamp_Bulb_01
+    400044: Street_Lamp_Bulb_01 1
+    400046: Street_Lamp_Bulb_01 2
+    400048: Street_Lamp_Bulb_01 3
+    400050: Street_Lamp_Bulb_01 4
+    400052: Street_Lamp_Bulb_01 5
+    400054: Street_Lamp_Bulb_01 6
+    400056: Street_Lamp_Bulb_01 7
+    400058: transform1
+    400060: transform1 1
+    400062: transform1 2
+    400064: transform1 3
+    2300000: polySurface1
+    2300002: polySurface1 1
+    2300004: polySurface1 2
+    2300006: polySurface1 3
+    2300008: polySurface2
+    2300010: polySurface2 1
+    2300012: polySurface2 2
+    2300014: polySurface2 3
+    2300016: //RootNode
+    2300018: Street_Lamp_Body_01
+    2300020: Street_Lamp_Body_02
+    2300022: Street_Lamp_Body_03
+    2300024: Street_Lamp_Body_04
+    2300026: Street_Lamp_Body_05
+    2300028: Street_Lamp_Body_06
+    2300030: Street_Lamp_Body_07
+    2300032: Street_Lamp_Body_08
+    2300034: Street_Lamp_Bulb_01
+    2300036: Street_Lamp_Bulb_01 1
+    2300038: Street_Lamp_Bulb_01 2
+    2300040: Street_Lamp_Bulb_01 3
+    2300042: Street_Lamp_Bulb_01 4
+    2300044: Street_Lamp_Bulb_01 5
+    2300046: Street_Lamp_Bulb_01 6
+    2300048: Street_Lamp_Bulb_01 7
+    3300000: polySurface1
+    3300002: polySurface1 1
+    3300004: polySurface1 2
+    3300006: polySurface1 3
+    3300008: polySurface2
+    3300010: polySurface2 1
+    3300012: polySurface2 2
+    3300014: polySurface2 3
+    3300016: //RootNode
+    3300018: Street_Lamp_Body_01
+    3300020: Street_Lamp_Body_02
+    3300022: Street_Lamp_Body_03
+    3300024: Street_Lamp_Body_04
+    3300026: Street_Lamp_Body_05
+    3300028: Street_Lamp_Body_06
+    3300030: Street_Lamp_Body_07
+    3300032: Street_Lamp_Body_08
+    3300034: Street_Lamp_Bulb_01
+    3300036: Street_Lamp_Bulb_01 1
+    3300038: Street_Lamp_Bulb_01 2
+    3300040: Street_Lamp_Bulb_01 3
+    3300042: Street_Lamp_Bulb_01 4
+    3300044: Street_Lamp_Bulb_01 5
+    3300046: Street_Lamp_Bulb_01 6
+    3300048: Street_Lamp_Bulb_01 7
+    4300000: BumpyRoad
+    4300002: polySurface1
+    4300004: polySurface2
+    4300006: polySurface1
+    4300008: polySurface2
+    4300010: polySurface1
+    4300012: polySurface2
+    4300014: polySurface1
+    4300016: polySurface2
+    4300018: Street_Lamp_Body_08
+    4300020: Street_Lamp_Bulb_01
+    4300022: Street_Lamp_Body_07
+    4300024: Street_Lamp_Bulb_01
+    4300026: Street_Lamp_Body_06
+    4300028: Street_Lamp_Bulb_01
+    4300030: Street_Lamp_Body_05
+    4300032: Street_Lamp_Bulb_01
+    4300034: Street_Lamp_Body_04
+    4300036: Street_Lamp_Bulb_01
+    4300038: Street_Lamp_Body_03
+    4300040: Street_Lamp_Bulb_01
+    4300042: Street_Lamp_Body_02
+    4300044: Street_Lamp_Bulb_01
+    4300046: Street_Lamp_Body_01
+    4300048: Street_Lamp_Bulb_01
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Lamp_Body_MAT
+    second: {fileID: 2100000, guid: 266a400e279285a4e84cb9ae69715ee4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Lamp_Bulb_MAT
+    second: {fileID: 2100000, guid: cd0f4652cf7c33b41b12c4c05947e580, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: fdc5490468d04a84bb2e2c2decc35bc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultPolygonShader1
+    second: {fileID: 2100000, guid: e92ebac6b91894e46b4db48251a0979d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 9dde2aa101dc66b42a21aff092077115, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
