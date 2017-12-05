@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 using System.Collections;
 
 public class PeanutPouch : MonoBehaviour
@@ -14,7 +15,9 @@ public class PeanutPouch : MonoBehaviour
     public Text peanutInd;
     public Text acornsInd;
     public Text seedsInd;
-
+    
+    //public Powerup[] powerups;
+    
     private void OnTriggerEnter(Collider other)
     {
         PeanutCollectable pc = other.GetComponent<PeanutCollectable>();
@@ -41,5 +44,26 @@ public class PeanutPouch : MonoBehaviour
                 seedsInd.text = seeds.ToString();
                 break;
         }
+    }
+}
+
+[System.Serializable]
+public struct Powerup
+{
+    public string name;
+    public int cost;
+    public NutType nut;
+    public KeyCode key;
+    public float multiplier;
+    public float duration;
+
+    public Powerup(string name, int cost, NutType nut, KeyCode key, float multiplier, float duration)
+    {
+        this.name = name;
+        this.cost = cost;
+        this.nut = nut;
+        this.key = key;
+        this.duration = duration;
+        this.multiplier = multiplier;
     }
 }
