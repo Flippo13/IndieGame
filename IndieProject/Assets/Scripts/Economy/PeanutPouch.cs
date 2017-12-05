@@ -30,15 +30,15 @@ public class PeanutPouch : MonoBehaviour
         {
             case NutType.Acorn:
                 acorns += amount;
-                acornsInd.text = "Acorns: " + acorns;
+                acornsInd.text = acorns.ToString();
                 break;
             case NutType.Peanut:
                 peanuts += amount;
-                peanutInd.text = "Peanuts: " + peanuts;
+                peanutInd.text = peanuts.ToString();
                 break;
             case NutType.Seed:
                 seeds += amount;
-                seedsInd.text = "Seeds: " + seeds;
+                seedsInd.text = seeds.ToString();
                 break;
         }
     }
