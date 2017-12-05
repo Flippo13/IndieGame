@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1628
     height: 913
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -298,33 +298,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Environment/Road
+    - Assets/Prefabs/Environment
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Environment/Road
+  - Assets/Prefabs/Environment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Hp\Desktop\schoolwork\INDIE GAME\IndieGame\IndieProject
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 246}
-    m_SelectedIDs: 58280000
-    m_LastClickedID: 10328
-    m_ExpandedIDs: 00000000ba27000012280000182800003a28000024290000ae290000ca290000182a0000242a0000882a00004c2b000000ca9a3bffffff7f
+    m_SelectedIDs: ec290000
+    m_LastClickedID: 10732
+    m_ExpandedIDs: 00000000ba270000262800002a2800004e28000056290000ec2900000a2a0000602a00006c2a0000cc2a0000942b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Characters
-      m_OriginalName: Characters
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10640
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -338,7 +338,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba27000012280000182800003a28000024290000ae290000ca290000182a0000242a0000882a00004c2b0000
+    m_ExpandedIDs: 00000000ba270000262800002a2800004e28000056290000ec2900000a2a0000602a00006c2a0000cc2a0000942b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -454,7 +454,7 @@ MonoBehaviour:
     height: 520
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e2a0000a62b0000a4ceffffd22b0000e8290000
+    m_SelectedIDs: e22b0000
     m_LastClickedID: 0
     m_ExpandedIDs: 8efbffff00000000
     m_RenameOverlay:
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.3709806, y: 0.61419505, z: -0.39916015, w: 0.570807}
     speed: 2
-    m_Value: {x: 0.37097847, y: 0.61419153, z: -0.39915785, w: 0.5708037}
+    m_Value: {x: 0.3709806, y: 0.61419505, z: -0.39916015, w: 0.570807}
   m_Size:
     m_Target: 242.07846
     speed: 2
