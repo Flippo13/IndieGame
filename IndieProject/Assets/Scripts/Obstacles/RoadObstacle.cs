@@ -9,11 +9,12 @@ public class RoadObstacle : Obstacles
     private State state;
     public bool birth; 
     private Vector3 normalScale;
-    private float transition; 
+    private float transition;
     // Use this for initialization
     void Start()
     {
         normalScale = transform.localScale; 
+
     }
 
     // Update is called once per frame
@@ -32,9 +33,11 @@ public class RoadObstacle : Obstacles
     protected override void OnHit(PlayerController player)
     {
         //TODO: Call a function within player that slows the player down
-        Debug.Log("Hit"); 
-        player.ObstacleHit(-200); 
-        Destroy(gameObject); 
-
+        Debug.Log("Hit");
+        Vector3 hitDir = player.transform.position - transform.position;
+        hitDir = hitDir.normalized;
+        player.ObstacleHit(hitDir); 
+        
+        //Destroy(gameObject); 
     }
 }

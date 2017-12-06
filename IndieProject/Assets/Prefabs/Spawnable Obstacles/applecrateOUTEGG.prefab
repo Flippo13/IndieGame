@@ -39,6 +39,8 @@ GameObject:
   - component: {fileID: 95105670232530158}
   - component: {fileID: 114856794055152284}
   - component: {fileID: 54935978890238236}
+  - component: {fileID: 65849673104248578}
+  - component: {fileID: 65390698899049550}
   m_Layer: 0
   m_Name: applecrateOUTEGG
   m_TagString: Untagged
@@ -56,7 +58,6 @@ GameObject:
   - component: {fileID: 4251629080934896}
   - component: {fileID: 33165056557301478}
   - component: {fileID: 23411043091979020}
-  - component: {fileID: 65919798496491412}
   m_Layer: 0
   m_Name: Crate1
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071521226062216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -223.30447, y: 286.54, z: 181.68456}
+  m_LocalPosition: {x: -222.90689, y: 286.777, z: 156.4119}
   m_LocalScale: {x: 0.6181158, y: 0.6181158, z: 0.6181158}
   m_Children:
   - {fileID: 4024715707325900}
@@ -202,18 +203,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65919798496491412
+--- !u!65 &65390698899049550
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1765737329116138}
+  m_GameObject: {fileID: 1071521226062216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.74, y: 1, z: 3.11}
+  m_Center: {x: 0, y: 0.88, z: 0}
+--- !u!65 &65849673104248578
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1071521226062216}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 336.92957, y: 157.80151, z: 206.02829}
-  m_Center: {x: -0.0000076293945, y: 0.0000038146973, z: 0}
+  m_Size: {x: 3.34, y: 1.56, z: 1.98}
+  m_Center: {x: 0, y: 0.77, z: 0}
 --- !u!95 &95105670232530158
 Animator:
   serializedVersion: 3

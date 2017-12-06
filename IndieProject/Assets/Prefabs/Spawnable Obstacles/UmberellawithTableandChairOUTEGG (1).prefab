@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114230336460744040}
   - component: {fileID: 65255406916893096}
   - component: {fileID: 54061381093123408}
+  - component: {fileID: 65892218908959390}
   m_Layer: 0
   m_Name: UmberellawithTableandChairOUTEGG (1)
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485711020749434}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -223.85732, y: 286.1, z: 182.65262}
+  m_LocalPosition: {x: -223.69084, y: 286.23105, z: 158.35507}
   m_LocalScale: {x: 0.0020961855, y: 0.002096185, z: 0.002096185}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,6 +113,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 749.19, y: 711.4077, z: 743.95447}
+  m_Center: {x: 0, y: 355.70386, z: -0.000015258789}
+--- !u!65 &65892218908959390
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1485711020749434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1125.7, y: 711.4077, z: 1341.6}
   m_Center: {x: 0, y: 355.70386, z: -0.000015258789}
 --- !u!95 &95434773130732774
 Animator:

@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     private float invincibleTime;
     private float flashCounter;
     public float flashLength; 
+    public float bounceForce; 
+
 
     private void Start()
     {
@@ -239,9 +241,19 @@ public class PlayerController : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    public void ObstacleHit(float bouceBackValue)
+    public void ObstacleHit(Vector3 bounceDir)
     {
-        moveDir *= bouceBackValue; 
+        if (invincibleTime <= 0)
+        {
+            moveDir = bounceDir * bounceForce;
+
+            invincibleTime = setInvincibleTime;
+
+            playerRenderer.enabled = false;
+            flashCounter = flashLength;
+            moveSpd = 0;
+            x = 0;
+        }
     }
 
    private void  OnControllerColliderHit(ControllerColliderHit hit)
@@ -252,16 +264,12 @@ public class PlayerController : MonoBehaviour
 
         if (invincibleTime > 0)
             Physics.IgnoreCollision(GetComponent<Collider>(), body.GetComponent<Collider>());
-
+ 
         if (body.GetComponent<RoadObstacle>())
         {
-            Debug.Log("Obstacle Hit");
-                invincibleTime = setInvincibleTime;
-
-                playerRenderer.enabled = false;
-                flashCounter = flashLength; 
-                moveSpd = 0;
-                x = 0;
+            invincibleTime = setInvincibleTime;
+            Vector3 hitDir = transform.position - body.transform.position;
+            hitDir = hitDir.normalized;
         }
         else {
 
