@@ -485,8 +485,8 @@ MonoBehaviour:
   spawnPos: {fileID: 1025516199}
   spawnSpeed: 5
   cars:
-  - {fileID: 1804238772301904, guid: 9092aab49ea308545b57af1144414243, type: 2}
-  - {fileID: 1612101325914694, guid: 08a166c2620f61b409e345bf9566190a, type: 2}
+  - {fileID: 1589124582113234, guid: 2eaaf6b5a3395a140b027b509ac6d295, type: 2}
+  - {fileID: 1671230723184502, guid: d9bc83dbeb9cf3744a96bc4a1a71072f, type: 2}
 --- !u!65 &741259834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -731,8 +731,8 @@ MonoBehaviour:
   spawnPos: {fileID: 843024059}
   spawnSpeed: 5
   cars:
-  - {fileID: 1804238772301904, guid: 9092aab49ea308545b57af1144414243, type: 2}
-  - {fileID: 1612101325914694, guid: 08a166c2620f61b409e345bf9566190a, type: 2}
+  - {fileID: 1589124582113234, guid: 2eaaf6b5a3395a140b027b509ac6d295, type: 2}
+  - {fileID: 1671230723184502, guid: d9bc83dbeb9cf3744a96bc4a1a71072f, type: 2}
 --- !u!1 &843024058
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,12 +930,12 @@ Prefab:
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 486.5
+      value: 570
       objectReference: {fileID: 0}
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 242
+      value: 300.5
       objectReference: {fileID: 0}
     - target: {fileID: 224076738862819994, guid: a0869c29adbd5514697743a965da10d3,
         type: 2}

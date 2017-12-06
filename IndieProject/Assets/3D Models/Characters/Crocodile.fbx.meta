@@ -15,7 +15,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Crocodile_Material
-    second: {fileID: 2100000, guid: 4c51401c29a8229499d5afef580979ed, type: 2}
+    second: {fileID: 2100000, guid: 0af1c8aae3f6bec4eba8ddf5cd0ae1b3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +45,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

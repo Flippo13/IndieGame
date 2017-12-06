@@ -1,120 +1,222 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-    
-    public Camera playerCamera;
-    private Transform cameraTransform;
+public class PlayerController : MonoBehaviour
+{
+    public CharacterController charC;
 
-    private CharacterController controller;
-    private bool grounded { get { return controller.isGrounded; } }
+    private enum PlayerState { Default, Jumping, DoubleJumping, WallRunning, Braking };
+    private PlayerState playerState;
 
-    public bool Enabled;
-
-    private float momentum;
-    private Vector3 movement;
-
-    [Header("Player")]
-    public float walkSpeed;
-    public float runSpeed;
-    public float speedUp;
-    public float jump;
-    [Range(0, 1)]
-    public float friction;
-
-    [Header("Camera")]
-    public float distance;
+    private Vector3 moveDir;
     [SerializeField]
-    [Range(-45, 45)]
-    private float _angle;
-    public float angle
-    {
-        get { return playerCamera.transform.rotation.eulerAngles.z; }
-        set
-        {
-            playerCamera.transform.rotation = Quaternion.Euler(value, playerCamera.transform.rotation.eulerAngles.y, 0);
-            MoveCamera();
-        }
-    }
+    private float moveSpd = 0;
     [SerializeField]
-    private bool _showCursor;
-    public bool showCursor
+    private float spdMulti;
+    [SerializeField]
+    private float maxSpd;
+    [SerializeField]
+    private float turnSpd;
+    [SerializeField]
+    private float maxTurnSpd;
+    [SerializeField]
+    private float brakeValue;
+    [SerializeField]
+    private float slownDownTransition; 
+    [SerializeField]
+    private float jumpStrength; 
+    private Vector3 vel;
+    private Vector3 acc;
+    [SerializeField]
+    private float gravity = 20f;
+    private float x;
+    private int jumpCount = 0;
+    private float slowSpeed; 
+    private RaycastHit wallHit;
+
+    private void Start()
     {
-        get { return Cursor.visible; }
-        set { Cursor.visible = value; }
+        charC = GetComponent<CharacterController>();
+        playerState = PlayerState.Default; 
     }
 
-    void Awake () {
-        controller = GetComponent<CharacterController>();
-        Debug.Assert(controller != null, gameObject.name + ": No CharacterController attached.");
-        Debug.Assert(playerCamera != null, gameObject.name + ": No Camera Attached.");
-        showCursor = _showCursor;
+    private void Update()
+    {
     }
 
     private void FixedUpdate()
     {
-        if (Enabled)
+        PlayerInput(); 
+        moveDir.y -= gravity * Time.deltaTime;
+        charC.Move(moveDir * Time.deltaTime);
+
+        switch (playerState)
         {
-            MovePlayer();
-            MoveCamera();
+            case PlayerState.Default :
+                MoveForward(); 
+            break;
+            case PlayerState.Braking :
+                Brake();
+                break;
         }
     }
 
-
-    private void MovePlayer()
+    private void MoveForward()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (moveSpd <= maxSpd)
         {
-            if (movement.z < walkSpeed) movement.z = walkSpeed;
-            if (movement.z < runSpeed) movement.z += speedUp;
+            x += Time.deltaTime;
+            moveSpd = 3 * Mathf.Pow(spdMulti, x);
         }
-        if (Input.GetKey(KeyCode.S)) movement.z = -walkSpeed;
-        if (Input.GetKey(KeyCode.A)) movement.x = -walkSpeed;
-        if (Input.GetKey(KeyCode.D)) movement.x = walkSpeed;
+       
+        float turnSpdTime = moveSpd / maxSpd;
+        if (turnSpdTime > 1)
+            turnSpdTime = 1;
+        turnSpd = Mathf.Lerp(0, maxTurnSpd, turnSpdTime);
 
-        if (grounded)
+        if (charC.isGrounded)
         {
-            if (Input.GetKey(KeyCode.Space)) movement.y += jump;
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDir = transform.TransformDirection(Vector3.forward);
+            moveDir *= moveSpd;
         }
-        else
+    }
+
+    private void PlayerInput()
+    {
+        if (Input.GetKey(KeyCode.A))
+            Rotate(-1);
+        if (Input.GetKey(KeyCode.D))
+            Rotate(1);
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount <= 1)
         {
-            movement += Physics.gravity * Time.deltaTime;
+            turnSpd = 30;
+            jumpCount++; 
+            moveDir.y = jumpStrength;
         }
 
-        movement *= friction;
-
-        controller.Move(movement);
-
-        /**Basic Movement
-        float delta;
-
-        movement.x += Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
-        movement.z += Input.GetAxis("Vertical") * runSpeed * Time.deltaTime;
-
-        movement *= friction;
-
-        controller.Move(movement);
-        if (grounded)
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            if (Input.GetButtonDown("Jump"))
+            playerState = PlayerState.Braking; 
+            slowSpeed = moveSpd / brakeValue;
+        }
+       
+        if (jumpCount >= 2 && charC.isGrounded)
+        {
+            jumpCount = 0;
+        }
+    }
+
+    private void CheckWallRun()
+    {
+        if (jumpCount > 0)
+        {
+            wallHit = WallCheck();
+            if (wallHit.collider != null)
             {
-                movement.y += Input.GetAxis("Jump") * jump;
+                UpdateWallRun(); 
             }
-            delta = runSpeed;
         }
-        else
-        {
-            movement += Physics.gravity * Time.deltaTime;
-            delta = airSpeed;
-        }
-        /**/
     }
 
-    public void MoveCamera()
+    private void Brake()
     {
-        if (playerCamera == null) return;
-        playerCamera.transform.position = transform.position - (playerCamera.transform.forward * distance);
+        slownDownTransition += Time.deltaTime * 1/3;
+        if (slownDownTransition > 0)
+        {
+            moveSpd = Mathf.Lerp(moveSpd, slowSpeed, slownDownTransition);
+            x -= Time.deltaTime * 1 / 3;
+        }
+        if (slownDownTransition > 1.5f)
+        {
+            slownDownTransition = 0;
+            playerState = PlayerState.Default; 
+        }
+
+        if (charC.isGrounded)
+        {
+            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDir = transform.TransformDirection(Vector3.forward);
+            moveDir *= moveSpd;
+        }
+    }
+
+    private void Rotate(int dir)
+    {
+        transform.Rotate((transform.up * dir) * turnSpd * Time.deltaTime);
+
+    }
+
+    private void Jump()
+    {
+        jumpCount++; 
+
+        if(jumpCount == 2)
+            moveDir.y = jumpStrength * 1.2f;
+        else
+
+        if (charC.isGrounded)
+        {
+            playerState = PlayerState.Default; 
+        }
+
     }
     
+    private RaycastHit WallCheck()
+    {
+        Ray rightRay = new Ray(transform.position, transform.TransformDirection(Vector3.right));
+        Ray leftRay = new Ray(transform.position, -transform.TransformDirection(Vector3.left));
+
+        RaycastHit wallHitRight;
+        RaycastHit wallHitLeft;
+
+        bool rightHit = Physics.Raycast(rightRay.origin, rightRay.direction, out wallHitRight, 2f);
+        bool leftHit =  Physics.Raycast(leftRay.origin, leftRay.direction, out wallHitLeft, 2f);
+
+        Debug.Log(rightHit + " " + leftHit); 
+
+        if (rightHit && Vector3.Angle(transform.TransformDirection(Vector3.forward),wallHitRight.normal ) > 90)
+        {
+            return wallHitRight; 
+        }
+        else
+        if (leftHit && Vector3.Angle(transform.TransformDirection(Vector3.forward), wallHitLeft.normal) > 90)
+        {
+            wallHitLeft.normal *= -1; 
+            return wallHitRight;
+        }
+        else
+            return new RaycastHit(); 
+    }
+    
+    private void UpdateWallRun()
+    {
+        if (charC.isGrounded)
+        {
+             wallHit = WallCheck();
+            if (wallHit.collider == null)
+            {
+                StopWallRun();
+                return;
+            }
+            Debug.Log("Wall running"); 
+            float lastJumpHeight = moveDir.y;
+
+            Vector3 crossVec = Vector3.Cross(wallHit.normal, -Vector3.up);
+
+            Quaternion lookRotation = Quaternion.LookRotation(crossVec);
+            transform.rotation = lookRotation;
+
+            moveDir = crossVec;
+            moveDir.Normalize();
+            moveDir *= moveSpd;
+        }
+    }
+
+    private void StopWallRun()
+    {
+        throw new NotImplementedException();
+    }
 }

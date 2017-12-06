@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: fb1c60bc5f504534987b0145b76445d1
 folderAsset: yes
 timeCreated: 1512567871
+=======
+guid: 668ab69877f72704891a65d80b045080
+folderAsset: yes
+timeCreated: 1512480683
+>>>>>>> Felix_Branch
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
