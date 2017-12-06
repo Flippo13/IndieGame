@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening; 
 
 public class Egg : MonoBehaviour {
 
@@ -13,7 +14,9 @@ public class Egg : MonoBehaviour {
     private GameObject enemy;
 
     [SerializeField]
-    private float speed; 
+    private float speed;
+
+    private Animator anim; 
 
     private enum State {Obstacle, Falling};
     private State state; 
@@ -22,22 +25,22 @@ public class Egg : MonoBehaviour {
     private bool canHit;
 
     [SerializeField]
-    private GameObject[] spawnableObjects; 
+    private GameObject[] spawnableObjects;
+
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-
-        player = GameObject.Find("Player 2.1");
-        enemy = GameObject.Find("Enemy");
+        anim = GetComponent<Animator>(); 
+        player = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.Find("Stork");
 
         state = State.Falling; 
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        Debug.DrawRay(transform.position, enemy.transform.position - this.transform.position, Color.red);
-
+       
         CheckPlayerPosition();
 	} 
 
@@ -45,25 +48,27 @@ public class Egg : MonoBehaviour {
     {
         distanceFromPlayer = player.transform.position - this.transform.position;
 
-        if (distanceFromPlayer.magnitude < 20 && state == State.Obstacle)
+        if (distanceFromPlayer.magnitude < 40 && state == State.Obstacle)
             Break(); 
 
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.tag == "Ground")
-        {
             state = State.Obstacle; 
-        }
     }
 
     private void Break()
     {
-        int chosenObject = Random.Range(0, spawnableObjects.Length);
         //Play break animation
-        GameObject spawnedObject = Instantiate(spawnableObjects[chosenObject], this.transform.position, Quaternion.identity);
-        Destroy(gameObject); 
+        anim.SetTrigger("Break");
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Break") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+           int chosenObject = Random.Range(0, spawnableObjects.Length);
+            GameObject spawnedObject = Instantiate(spawnableObjects[chosenObject], new Vector3(transform.position.x,transform.position.y + 1,transform.position.z), Quaternion.identity);
+            spawnedObject.GetComponent<RoadObstacle>().birth = true; 
+            Destroy(gameObject);
+        }
     }
 
 }

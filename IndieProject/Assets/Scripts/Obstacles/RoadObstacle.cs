@@ -5,23 +5,35 @@ using UnityEngine;
 
 public class RoadObstacle : Obstacles
 {
-
+    private enum State {  Default, Birth};
+    private State state;
+    public bool birth; 
+    private Vector3 normalScale;
+    private float transition; 
     // Use this for initialization
     void Start()
     {
-
+        normalScale = transform.localScale; 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (birth)
+            Birth(); 
     }
 
-    protected override void OnHit(PlayerController_Felix player)
+    public void Birth()
+    {
+        transition += Time.deltaTime * 1/0.3f;
+      transform.localScale =  Vector3.Lerp(Vector3.zero, normalScale, transition); 
+    }
+
+    protected override void OnHit(PlayerController player)
     {
         //TODO: Call a function within player that slows the player down
-        player.ObstacleHit();
+        Debug.Log("Hit"); 
+        player.ObstacleHit(-200); 
         Destroy(gameObject); 
 
     }

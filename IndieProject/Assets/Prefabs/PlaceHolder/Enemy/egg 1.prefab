@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 4635014154783328}
   - component: {fileID: 95979555942859972}
   - component: {fileID: 54947976141241394}
-  - component: {fileID: 65703817745992350}
   - component: {fileID: 114791773286544700}
+  - component: {fileID: 65053386930087274}
   m_Layer: 0
   m_Name: egg 1
   m_TagString: Untagged
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304114067546614}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.110223e-16, z: 2.5711396}
+  m_LocalPosition: {x: 0, y: 0, z: -1.78}
   m_LocalScale: {x: 1, y: 0.8608984, z: 1}
   m_Children: []
   m_Father: {fileID: 4635014154783328}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401322079386268}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.32, y: 3.477, z: 1.072}
+  m_LocalPosition: {x: -223.85469, y: 287.11026, z: 185.34804}
   m_LocalScale: {x: 1.0438409, y: 1.3027577, z: 1.0310775}
   m_Children:
   - {fileID: 4335250451220888}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863037045512384}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.110223e-16, z: 2.4732215}
+  m_LocalPosition: {x: 0, y: 0, z: -1.85}
   m_LocalScale: {x: 1, y: 0.861, z: 1}
   m_Children: []
   m_Father: {fileID: 4635014154783328}
@@ -194,15 +194,15 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401322079386268}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65703817745992350
+--- !u!65 &65053386930087274
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -244,7 +244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemy: {fileID: 0}
+  speed: 0
   spawnableObjects:
-  - {fileID: 1190051639215054, guid: 4949952da17746f4c902868a33e42cc8, type: 2}
-  - {fileID: 1819286100005170, guid: 758ea75b2a04392479ee4d403a1839c2, type: 2}
-  - {fileID: 1190051639215054, guid: 4949952da17746f4c902868a33e42cc8, type: 2}
+  - {fileID: 1071521226062216, guid: 079db2fe68f8f8347881e287a5d4005f, type: 2}
+  - {fileID: 1915488388976202, guid: b29cfc1dce2de5e41b29b9534c282f6b, type: 2}
+  - {fileID: 1915488388976202, guid: b29cfc1dce2de5e41b29b9534c282f6b, type: 2}
+  - {fileID: 1485711020749434, guid: c9474209da398a7418f0485e5e6df17e, type: 2}

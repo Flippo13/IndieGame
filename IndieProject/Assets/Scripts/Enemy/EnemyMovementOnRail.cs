@@ -26,8 +26,8 @@ public class EnemyMovementOnRail : MonoBehaviour {
     // Use this for initialization
     void Start () {
         startTime = Time.time;
-        rb = GetComponent<Rigidbody>(); 
-        //distToNextNode = path.DistToNextNode(currentSeg); 
+        rb = GetComponent<Rigidbody>();
+        distToNextNode = 1; 
 	}
 	
 	// Update is called once per frame
@@ -38,35 +38,36 @@ public class EnemyMovementOnRail : MonoBehaviour {
             FollowPath();
         else
             rb.useGravity = true; 
-
+        
         distanceFromPlayer = transform.position - player.transform.position;
-
-
-        if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && speed > 10)
-            speed--;
-        else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer && speed < 25)
-            speed++; 
-
     }
 
     private void FollowPath()
     {
-        Debug.Log(transform.position); 
         float distCovered = (Time.time - startTime) * speed;
-        float distToGo = distCovered / distToNextNode; 
+        float distToGo = distCovered / distToNextNode;
 
         if (distToGo > 1)
         {
+            if (distanceFromPlayer.magnitude > maxDistanceFromPlayer)
+                speed = 15;
+            else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer)
+                speed = 25; 
+            distToGo = 0;
             currentSeg++;
             startTime = Time.time; 
-            distToGo = 0;
             distToNextNode = path.DistToNextNode(currentSeg);  
         }
+
         else if (distToGo < 0)
         {
+            if (distanceFromPlayer.magnitude > maxDistanceFromPlayer)
+                speed = 15;
+            else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer)
+                speed = 25;
+            distToGo = 1; 
             currentSeg--;
             startTime = Time.time; 
-            distToGo = 1; 
             distToNextNode = path.DistToNextNode(currentSeg); 
         }
 

@@ -43,7 +43,6 @@ public class EnemyController : MonoBehaviour
         distanceFromPlayer = transform.position - player.transform.position;
         //Debug.Log("Distance from Player "+ distanceFromPlayer.magnitude);
         //Debug.Log("Velocity " + rb.velocity.magnitude); 
-        if(distanceFromPlayer.magnitude < 100f) 
         dropTime -= Time.deltaTime;
 
         if (dropTime <= 0)
@@ -51,9 +50,10 @@ public class EnemyController : MonoBehaviour
             ChooseDropPos(); 
             dropTime = setDropTime; 
         }
-        Move();
+       // Move();
     }
 
+    /*
     private void Move()
     {
         if (distanceFromPlayer.magnitude > maxDistanceFromPlayer && rb.velocity.magnitude > 20)
@@ -61,7 +61,7 @@ public class EnemyController : MonoBehaviour
         else if (rb.velocity.magnitude < 40f)
             rb.AddForce(moveDirection * speed);
     }
-
+    */
 
     private void ChooseDropPos()
     {

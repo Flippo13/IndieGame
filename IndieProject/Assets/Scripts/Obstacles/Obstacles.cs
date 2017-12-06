@@ -6,14 +6,14 @@ public abstract class Obstacles : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter(Collider collider)
     {
-        PlayerController_Felix player = collider.GetComponent<PlayerController_Felix>();
+        PlayerController player = collider.GetComponent<PlayerController>();
         if(player)
             OnHit(player);
     }
 
     protected virtual void OnTriggerStay(Collider collider)
     {
-        PlayerController_Felix player = collider.GetComponent<PlayerController_Felix>();
+        PlayerController player = collider.GetComponent<PlayerController>();
 
         if (player)
             OnHit(player);
@@ -21,11 +21,11 @@ public abstract class Obstacles : MonoBehaviour {
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        PlayerController_Felix player = collision.collider.GetComponent<PlayerController_Felix>();
+        PlayerController player = collision.collider.GetComponent<PlayerController>();
 
         if (player)
             OnHit(player);
     }
 
-    protected abstract void OnHit(PlayerController_Felix player);
+    protected abstract void OnHit(PlayerController player);
 }

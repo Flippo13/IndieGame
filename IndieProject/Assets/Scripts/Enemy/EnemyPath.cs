@@ -16,8 +16,6 @@ public class EnemyPath : MonoBehaviour {
 	
     public Vector3 LinearPosition(int seg, float ratio)
     {
-       // if (seg < nodes.Length)
-        
             Vector3 p1 = nodes[seg].position;
             Vector3 p2 = nodes[seg + 1].position;
         

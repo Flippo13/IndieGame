@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController charC;
+    public Renderer playerRenderer; 
 
     private enum PlayerState { Default, Jumping, DoubleJumping, WallRunning, Braking };
     private PlayerState playerState;
@@ -35,22 +36,40 @@ public class PlayerController : MonoBehaviour
     private int jumpCount = 0;
     private float slowSpeed; 
     private RaycastHit wallHit;
+    public float setInvincibleTime;
+    private float invincibleTime;
+    private float flashCounter;
+    public float flashLength; 
 
     private void Start()
     {
         charC = GetComponent<CharacterController>();
-        playerState = PlayerState.Default; 
+        playerState = PlayerState.Default;
     }
 
-    private void Update()
-    {
-    }
-
+   
     private void FixedUpdate()
     {
         PlayerInput(); 
         moveDir.y -= gravity * Time.deltaTime;
         charC.Move(moveDir * Time.deltaTime);
+
+        if (invincibleTime > 0)
+        {
+            invincibleTime -= Time.deltaTime;
+            flashCounter -= Time.deltaTime; 
+            if (flashCounter <= 0)
+            {
+                playerRenderer.enabled = !playerRenderer.enabled;
+                flashCounter = flashLength; 
+            }
+            if (invincibleTime <= 0)
+            {
+                playerRenderer.enabled = true; 
+            } 
+        }
+
+
 
         switch (playerState)
         {
@@ -219,4 +238,41 @@ public class PlayerController : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    public void ObstacleHit(float bouceBackValue)
+    {
+        moveDir *= bouceBackValue; 
+    }
+
+   private void  OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.collider.attachedRigidbody;
+        if (body == null || body.isKinematic)
+            return;
+
+        if (invincibleTime > 0)
+            Physics.IgnoreCollision(GetComponent<Collider>(), body.GetComponent<Collider>());
+
+        if (body.GetComponent<RoadObstacle>())
+        {
+            Debug.Log("Obstacle Hit");
+                invincibleTime = setInvincibleTime;
+
+                playerRenderer.enabled = false;
+                flashCounter = flashLength; 
+                moveSpd = 0;
+                x = 0;
+        }
+        else {
+
+            if (hit.moveDirection.y < -0.3F)
+                return;
+
+            Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+            body.velocity = pushDir * 20;
+        }
+
+        
+    }
+
 }
