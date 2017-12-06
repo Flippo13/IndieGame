@@ -1,7 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
-using System.Collections;
 
 public class PeanutPouch : MonoBehaviour
 {

@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
             if (moveSpd <= maxSpd)
             {
                 x += Time.deltaTime;
-                moveSpd = 3 * Mathf.Pow(spdMulti, x);
+                moveSpd = 1 * Mathf.Pow(spdMulti, x);
             }
 
             float turnSpdTime = moveSpd / maxSpd;
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
             moveDir.y = jumpStrength;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && moveSpd > 15)
         {
             playerState = PlayerState.Braking; 
             slowSpeed = moveSpd / brakeValue;

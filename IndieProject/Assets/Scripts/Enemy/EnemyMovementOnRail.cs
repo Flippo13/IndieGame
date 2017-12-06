@@ -6,7 +6,8 @@ using UnityEngine;
 public class EnemyMovementOnRail : MonoBehaviour {
 
     public EnemyPath path;
-    public GameObject player; 
+    public GameObject player;
+    public GameObject baby; 
 
     private int currentSeg;
     private float transition;
@@ -36,9 +37,15 @@ public class EnemyMovementOnRail : MonoBehaviour {
             return;
         if (!isCompleted)
             FollowPath();
-        else
-            rb.useGravity = true; 
         
+        if(path.EndOfPath(currentSeg))
+        {
+            DropBaby(); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+            DropBaby(); 
+
         distanceFromPlayer = transform.position - player.transform.position;
     }
 
@@ -79,5 +86,11 @@ public class EnemyMovementOnRail : MonoBehaviour {
 
         transform.position = path.LinearPosition(currentSeg, distToGo);
         transform.rotation = path.Orientation(currentSeg, distToGo); 
+    }
+
+    private void DropBaby()
+    {
+        baby.transform.parent = null;
+        baby.GetComponent<Rigidbody>().useGravity = true; 
     }
 }

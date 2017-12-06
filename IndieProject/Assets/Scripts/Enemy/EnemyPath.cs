@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class EnemyPath : MonoBehaviour {
 
     private Transform[] nodes; 
@@ -37,16 +35,18 @@ public class EnemyPath : MonoBehaviour {
     
     private void OnDrawGizmos()
     {
+        /*
         Handles.color = Color.red; 
         for (int i = 0; i < nodes.Length - 1; i++)
         {
             Handles.DrawDottedLine(nodes[i].position, nodes[i + 1].position, 2.0f); 
         }
+        */
     }
 
     public bool EndOfPath(int currentSeg)
     {
-        return currentSeg == nodes.Length - 1; 
+        return currentSeg == nodes.Length - 2; 
     }
 	// Update is called once per frame
 	void Update () {
