@@ -30,24 +30,6 @@ public class WinLose : UIBase {
         Show(loseScreen);
     }
 
-    public void NextLevel()
-    {
-        Show(loadingScreen);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void ReloadScene()
-    {
-        Show(loadingScreen);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void QuitToMenu()
-    {
-        Show(loadingScreen);
-        SceneManager.LoadScene(0);
-    }
-
     public void OnAreYouSureWin(int brightness)
     {
         byte b = (byte)Mathf.Clamp(brightness, 0, BMAX);

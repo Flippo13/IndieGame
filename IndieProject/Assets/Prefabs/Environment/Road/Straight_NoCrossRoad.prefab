@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33017598907691666}
   - component: {fileID: 23600236748106164}
   - component: {fileID: 95374223198058752}
+  - component: {fileID: 65319203421828934}
   m_Layer: 0
   m_Name: Straight_NoCrossRoad
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1857378379465010}
   m_Mesh: {fileID: 4300000, guid: a9e44d13bedaa3d40882ec427ac3a18c, type: 3}
+--- !u!65 &65319203421828934
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1857378379465010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1748.8044, y: 7.2368774, z: 1824.2766}
+  m_Center: {x: -1.2167053, y: 0.4842224, z: -911.1416}
 --- !u!95 &95374223198058752
 Animator:
   serializedVersion: 3

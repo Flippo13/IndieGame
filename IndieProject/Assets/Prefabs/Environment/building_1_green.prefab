@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4245114495811210}
   - component: {fileID: 33625249646436982}
   - component: {fileID: 23310195314958500}
+  - component: {fileID: 65609758083836604}
   m_Layer: 0
   m_Name: polySurface1
   m_TagString: Untagged
@@ -37,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4706316855793476}
   - component: {fileID: 95914663738838974}
+  - component: {fileID: 65160293552728562}
   m_Layer: 0
   m_Name: building_1_green
   m_TagString: Untagged
@@ -54,6 +56,7 @@ GameObject:
   - component: {fileID: 4124822934902726}
   - component: {fileID: 33759828054539014}
   - component: {fileID: 23580620126187692}
+  - component: {fileID: 65393078123448632}
   m_Layer: 0
   m_Name: polySurface2
   m_TagString: Untagged
@@ -184,6 +187,42 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1960005958205018}
   m_Mesh: {fileID: 4300002, guid: 3da514bd8d8872449b5f38b700bd49ee, type: 3}
+--- !u!65 &65160293552728562
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922877823947350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65393078123448632
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960005958205018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.542001, y: 10.447989, z: 6.513166}
+  m_Center: {x: 0, y: 9.589697, z: 0}
+--- !u!65 &65609758083836604
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124711475524742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.932655, y: 14.713851, z: 5.932655}
+  m_Center: {x: 0, y: 7.302444, z: -0.000010967255}
 --- !u!95 &95914663738838974
 Animator:
   serializedVersion: 3

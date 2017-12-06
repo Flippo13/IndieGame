@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.Plugins", "Ind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.Editor.Plugins", "IndieProject.Editor.Plugins.csproj", "{3798B4B8-BFA6-4139-F1E9-1B8575FEC146}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndieProject.Editor", "IndieProject.Editor.csproj", "{76B878D3-7724-6161-8336-57D6E5CC9C96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{3798B4B8-BFA6-4139-F1E9-1B8575FEC146}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3798B4B8-BFA6-4139-F1E9-1B8575FEC146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3798B4B8-BFA6-4139-F1E9-1B8575FEC146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B878D3-7724-6161-8336-57D6E5CC9C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B878D3-7724-6161-8336-57D6E5CC9C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B878D3-7724-6161-8336-57D6E5CC9C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B878D3-7724-6161-8336-57D6E5CC9C96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

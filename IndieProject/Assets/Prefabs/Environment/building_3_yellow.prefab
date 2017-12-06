@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33113585263916014}
   - component: {fileID: 23240927950609496}
   - component: {fileID: 95358465857731438}
+  - component: {fileID: 65203229263836250}
   m_Layer: 0
   m_Name: building_3_yellow
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917992007059394}
   m_Mesh: {fileID: 4300000, guid: f40e5f85e5bdb7843b99189d9342040f, type: 3}
+--- !u!65 &65203229263836250
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917992007059394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.194871, y: 16.167995, z: 3.7903085}
+  m_Center: {x: 0, y: -0.000015735626, z: 0}
 --- !u!95 &95358465857731438
 Animator:
   serializedVersion: 3

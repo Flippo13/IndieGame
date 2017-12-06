@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33026717698362116}
   - component: {fileID: 23719026107646966}
   - component: {fileID: 95989537580376830}
+  - component: {fileID: 65728232381473678}
   m_Layer: 0
   m_Name: building_2_purple
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538991377046946}
   m_Mesh: {fileID: 4300000, guid: ce6497d85d8d13f49a7f43ed802b740e, type: 3}
+--- !u!65 &65728232381473678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538991377046946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5172706, y: 8.939908, z: 6.935783}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95989537580376830
 Animator:
   serializedVersion: 3

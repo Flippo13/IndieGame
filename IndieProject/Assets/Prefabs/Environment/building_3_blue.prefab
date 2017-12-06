@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33947317708064990}
   - component: {fileID: 23269337592128860}
   - component: {fileID: 95844698685289688}
+  - component: {fileID: 65901990806407498}
   m_Layer: 0
   m_Name: building_3_blue
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538809148729162}
   m_Mesh: {fileID: 4300000, guid: f40e5f85e5bdb7843b99189d9342040f, type: 3}
+--- !u!65 &65901990806407498
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538809148729162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.194871, y: 16.167995, z: 3.7903085}
+  m_Center: {x: 0, y: -0.000015735626, z: 0}
 --- !u!95 &95844698685289688
 Animator:
   serializedVersion: 3

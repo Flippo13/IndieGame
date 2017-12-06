@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33799629691703796}
   - component: {fileID: 23136904298796194}
   - component: {fileID: 95708916697245502}
+  - component: {fileID: 64804317289010182}
   m_Layer: 0
   m_Name: BumpyNoCrossRoad
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1547018576730768}
+  m_Mesh: {fileID: 4300000, guid: 9116dfdb60c9c4341b6db868596af1d3, type: 3}
+--- !u!64 &64804317289010182
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547018576730768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 9116dfdb60c9c4341b6db868596af1d3, type: 3}
 --- !u!95 &95708916697245502
 Animator:
