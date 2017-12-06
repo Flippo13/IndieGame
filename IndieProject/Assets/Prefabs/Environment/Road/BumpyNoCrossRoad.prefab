@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95708916697245502}
   - component: {fileID: 64804317289010182}
   m_Layer: 0
-  m_Name: BumpyNoCrossRoad
+  m_Name: BumpyNoCross1Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

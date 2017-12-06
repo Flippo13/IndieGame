@@ -65,9 +65,7 @@ public class ObstacleGenerator : MonoBehaviour {
             for (int b = 0; b < lanes; b++)
             {
                 if (emptySpots[a * lanes + b]) continue;
-<<<<<<< HEAD
-              //  switch(Lotto())
-=======
+
                 GameObject obj = null;
                 int lotto = Lotto(emptySpaces, obstacles, acorns, peanuts, seeds);
                 Debug.Log(lotto);
@@ -84,7 +82,6 @@ public class ObstacleGenerator : MonoBehaviour {
                     obj.transform.localPosition = new Vector3(b * laneWidth, 1, a);
                 }
                 emptySpots[a * lanes + b] = true;
->>>>>>> Alex_Branch
             }
         }
     }
