@@ -33,7 +33,6 @@ public class RoadObstacle : Obstacles
     protected override void OnHit(PlayerController player)
     {
         //TODO: Call a function within player that slows the player down
-        Debug.Log("Hit");
         Vector3 hitDir = player.transform.position - transform.position;
         hitDir = hitDir.normalized;
         player.ObstacleHit(hitDir); 

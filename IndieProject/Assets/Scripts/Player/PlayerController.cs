@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController charC;
-    public Renderer playerRenderer; 
-
+    public Renderer playerRenderer;
+    private Animator anim;
     private enum PlayerState { Default, Jumping, DoubleJumping, WallRunning, Braking };
     private PlayerState playerState;
 
@@ -40,19 +40,25 @@ public class PlayerController : MonoBehaviour
     private float invincibleTime;
     private float flashCounter;
     public float flashLength; 
-    public float bounceForce; 
+    public float bounceForce;
+    public float bounceTime;
+    private float bounceCounter; 
 
 
     private void Start()
     {
         charC = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        playerRenderer = GetComponentInChildren<Renderer>(); 
         playerState = PlayerState.Default;
     }
 
    
     private void FixedUpdate()
     {
-        PlayerInput(); 
+        PlayerInput();
+        anim.SetFloat("speed", ((moveSpd / maxSpd) + .7f) ); 
+
         moveDir.y -= gravity * Time.deltaTime;
         charC.Move(moveDir * Time.deltaTime);
 
@@ -71,8 +77,6 @@ public class PlayerController : MonoBehaviour
             } 
         }
 
-
-
         switch (playerState)
         {
             case PlayerState.Default :
@@ -86,22 +90,28 @@ public class PlayerController : MonoBehaviour
 
     private void MoveForward()
     {
-        if (moveSpd <= maxSpd)
-        {
-            x += Time.deltaTime;
-            moveSpd = 3 * Mathf.Pow(spdMulti, x);
-        }
-       
-        float turnSpdTime = moveSpd / maxSpd;
-        if (turnSpdTime > 1)
-            turnSpdTime = 1;
-        turnSpd = Mathf.Lerp(0, maxTurnSpd, turnSpdTime);
+        if (bounceCounter <= 0) {
+            if (moveSpd <= maxSpd)
+            {
+                x += Time.deltaTime;
+                moveSpd = 3 * Mathf.Pow(spdMulti, x);
+            }
 
-        if (charC.isGrounded)
+            float turnSpdTime = moveSpd / maxSpd;
+            if (turnSpdTime > 1)
+                turnSpdTime = 1;
+            turnSpd = Mathf.Lerp(0, maxTurnSpd, turnSpdTime);
+
+            if (charC.isGrounded)
+            {
+                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDir = transform.TransformDirection(Vector3.forward);
+                moveDir *= moveSpd;
+            }
+        }
+        else
         {
-            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDir = transform.TransformDirection(Vector3.forward);
-            moveDir *= moveSpd;
+            bounceCounter -= Time.deltaTime; 
         }
     }
 
@@ -245,14 +255,15 @@ public class PlayerController : MonoBehaviour
     {
         if (invincibleTime <= 0)
         {
-            moveDir = bounceDir * bounceForce;
-
+            bounceCounter = bounceTime; 
             invincibleTime = setInvincibleTime;
 
             playerRenderer.enabled = false;
             flashCounter = flashLength;
             moveSpd = 0;
             x = 0;
+            moveDir = bounceDir * bounceForce;
+            anim.SetTrigger("Bounce"); 
         }
     }
 
@@ -268,8 +279,8 @@ public class PlayerController : MonoBehaviour
         if (body.GetComponent<RoadObstacle>())
         {
             invincibleTime = setInvincibleTime;
-            Vector3 hitDir = transform.position - body.transform.position;
-            hitDir = hitDir.normalized;
+            if (invincibleTime > 0)
+                Physics.IgnoreCollision(GetComponent<Collider>(), body.GetComponent<Collider>());
         }
         else {
 
