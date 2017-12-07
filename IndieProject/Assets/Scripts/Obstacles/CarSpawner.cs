@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour {
 
-    private enum Try { First, Second, Third };
-    private Try numOfTry;
-
-    private enum SpawnDirection { Right, Left }; 
+    private enum SpawnDirection {Right,Left,Forward,Backward}; 
     [SerializeField]
     private SpawnDirection spawnDirection;
-    private float carDirection; 
-        
+    private float carDirection;
+    public bool isDestination; 
     [SerializeField]
     private Transform spawnPos;
 
@@ -25,14 +22,17 @@ public class CarSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        numOfTry = Try.First;
 
-        if (spawnDirection == SpawnDirection.Right)
-            carDirection = 0;
-        else if (spawnDirection == SpawnDirection.Left)
-            carDirection = 180; 
+        if (!isDestination)
+        {
+            if (spawnDirection == SpawnDirection.Right)
+                carDirection = 270;
+            else if (spawnDirection == SpawnDirection.Left)
+                carDirection = 0;
 
-        StartCoroutine("Spawning",spawnSpeed);
+
+            StartCoroutine("Spawning", spawnSpeed);
+        }
 	}
 	
 	// Update is called once per frame
@@ -49,9 +49,10 @@ public class CarSpawner : MonoBehaviour {
                 yield return new WaitForSeconds(spawnSpeed);
                 if (i > cars.Count - 1) i = 0;
                 Vector3 goodSpawnPos = new Vector3(spawnPos.position.x, spawnPos.position.y + (cars[i].transform.localScale.y/2), spawnPos.position.z); 
-                GameObject car = Instantiate(cars[i], goodSpawnPos, Quaternion.Euler(0,carDirection,0));
+                GameObject car = Instantiate(cars[i], goodSpawnPos,Quaternion.Euler(new Vector3 (0,carDirection,0)));
+                //car.transform.rotation = Quaternion.Lerp(car.transform.rotation,otherSpawner)
                 //car.gameObject.transform.position = new Vector3 (car.transform.position.x, car.GetComponent<Collider>().bounds.size.y,car.transform.position.z);
-                Physics.IgnoreCollision(this.GetComponent<Collider>(), car.GetComponent<Collider>()); 
+                //Physics.IgnoreCollision(this.GetComponent<Collider>(), car.GetComponent<Collider>()); 
             }
         }
     }

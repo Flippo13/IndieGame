@@ -57,9 +57,9 @@ public class EnemyMovementOnRail : MonoBehaviour {
         if (distToGo > 1)
         {
             if (distanceFromPlayer.magnitude > maxDistanceFromPlayer)
-                speed = 5;
+                speed = 7;
             else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer)
-                speed = 25; 
+                speed = 23; 
             distToGo = 0;
             currentSeg++;
             startTime = Time.time; 
@@ -69,9 +69,9 @@ public class EnemyMovementOnRail : MonoBehaviour {
         else if (distToGo < 0)
         {
             if (distanceFromPlayer.magnitude > maxDistanceFromPlayer)
-                speed = 15;
+                speed = 7;
             else if (distanceFromPlayer.magnitude < maxDistanceFromPlayer)
-                speed = 25;
+                speed = 23;
             distToGo = 1; 
             currentSeg--;
             startTime = Time.time; 

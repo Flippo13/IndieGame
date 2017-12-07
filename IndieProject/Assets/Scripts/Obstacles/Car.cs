@@ -19,13 +19,15 @@ public  class Car : Obstacles
 
     private void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime, Space.Self); 
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World); 
     }
 
     protected override void OnHit(PlayerController player)
     {
-        Debug.Log("Player hit Obstacle"); 
-
+        Debug.Log("Player hit Obstacle");
+        Vector3 hitDir = player.transform.position - transform.position;
+        hitDir = hitDir.normalized;
+        player.ObstacleHit(hitDir);
         //Call function within player to lower players speed and maker player blink and be invincible for a few seconds
     }
 }
